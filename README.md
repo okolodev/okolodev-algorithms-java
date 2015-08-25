@@ -1,3 +1,5 @@
+![Travis CI badge](https://travis-ci.org/okolodev/okolodev-algorithms-java.svg?branch=master)
+
 1. Install Java 8.
 
 2. Run `./gradlew check`
