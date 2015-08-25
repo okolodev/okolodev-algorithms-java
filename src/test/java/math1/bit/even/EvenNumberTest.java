@@ -43,7 +43,7 @@ public class EvenNumberTest {
     }
 
     private boolean isPowerOfTwo(int n) {
-        throw new UnsupportedOperationException("Implement me!");
+        return n > 0 && (n - 1 & n) == 0;
     }
 
 }

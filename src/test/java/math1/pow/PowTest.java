@@ -35,7 +35,33 @@ public class PowTest {
     }
 
     private double pow(double x, int n) {
-        throw new UnsupportedOperationException("Implement me!");
+        double result = 1;
+
+        while (n > 0) {
+            if (isOdd(n)) {
+                result = result * x;
+                n = n - 1;
+            } else {
+                x = x * x;
+                n = n / 2;
+            }
+        }
+
+        while (n < 0) {
+            if (isOdd(n)) {
+                result = result / x;
+                n = n + 1;
+            } else {
+                x = x * x;
+                n = n / 2;
+            }
+        }
+
+        return result;
+    }
+
+    private boolean isOdd(int n) {
+        return n % 2 != 0;
     }
 
 }

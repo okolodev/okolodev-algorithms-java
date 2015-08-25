@@ -31,9 +31,12 @@ public class LostNumberTest {
         };
     }
 
-
     private int findLostNumber(int[] numbers) {
-        throw new UnsupportedOperationException("Implement me!");
+        int xor = 0;
+        for (int i : numbers) {
+            xor = xor ^ i;
+        }
+        return xor;
     }
 
 }

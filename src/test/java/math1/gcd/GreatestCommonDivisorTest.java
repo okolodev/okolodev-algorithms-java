@@ -32,7 +32,11 @@ public class GreatestCommonDivisorTest {
     }
 
     private int gcd(int a, int b) {
-        throw new UnsupportedOperationException("Implement me!");
+        if (b == 0) {
+            return a;
+        }
+
+        return gcd(b, a % b);
     }
 
 }

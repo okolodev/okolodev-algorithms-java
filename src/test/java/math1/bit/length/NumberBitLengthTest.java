@@ -34,7 +34,11 @@ public class NumberBitLengthTest {
     }
 
     private int numberOfBits(int n) {
-        throw new UnsupportedOperationException("Implement me!");
+        if (n == 0) {
+            return 1;
+        }
+
+        return (int) Math.ceil(Math.log(n + 1) / Math.log(2));
     }
 
 }
