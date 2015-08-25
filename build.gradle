@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group = 'org.okolodev.algorithms.java'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.5'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "org.hamcrest:hamcrest-all:1.3"
+    testCompile "junit:junit:4.12"
+    testCompile "pl.pragmatists:JUnitParams:1.0.4"
+}
+
+task initSourceFolders {
+    sourceSets*.allSource.srcDirs*.each { it.mkdirs() }
+}
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
+    exclude(["**/AllTests*"])
+}
+
