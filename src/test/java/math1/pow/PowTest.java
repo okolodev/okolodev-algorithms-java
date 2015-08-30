@@ -37,8 +37,13 @@ public class PowTest {
     private double pow(double x, int n) {
         double result = 1;
 
+        boolean negativePow = n < 0;
+        if (negativePow) {
+            n = -n;
+        }
+
         while (n > 0) {
-            if (isOdd(n)) {
+            if (n % 2 != 0) {
                 result = result * x;
                 n = n - 1;
             } else {
@@ -47,21 +52,11 @@ public class PowTest {
             }
         }
 
-        while (n < 0) {
-            if (isOdd(n)) {
-                result = result / x;
-                n = n + 1;
-            } else {
-                x = x * x;
-                n = n / 2;
-            }
+        if (negativePow) {
+            return 1 / result;
         }
 
         return result;
-    }
-
-    private boolean isOdd(int n) {
-        return n % 2 != 0;
     }
 
 }
