@@ -6,7 +6,7 @@
 
 ## Materials
 
-### Math 1 links
+### 1 Math links
 
 - [Greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor )
 - [Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation)
@@ -15,7 +15,7 @@
 - [Recursion](https://en.wikipedia.org/wiki/Recursion)
 
 
-### Singly Linked List 2 links
+### 2 Singly Linked List links
 
 - [Wikipedia Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)
 - [Linked List](http://visualgo.net/list.html)
