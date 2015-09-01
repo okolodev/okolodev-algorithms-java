@@ -1,4 +1,4 @@
-![Travis CI badge](https://travis-ci.org/okolodev/okolodev-algorithms-java.svg?branch=master)
+[![Build Status](https://travis-ci.org/okolodev/okolodev-algorithms-java.svg?branch=master)](https://travis-ci.org/okolodev/okolodev-algorithms-java)
 
 1. Install Java 8.
 
