@@ -54,7 +54,33 @@ public class LinkedListCycleIITest {
     }
 
     private ListNode detectCycle(ListNode head) {
-        throw new UnsupportedOperationException("Implement me!");
+        if (head == null) {
+            return null;
+        }
+
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (fast.getNext() != null && fast.getNext().getNext() != null) {
+            fast = fast.getNext().getNext();
+            slow = slow.getNext();
+
+            if (fast == slow) {
+                break;
+            }
+        }
+
+        if (fast.getNext() == null || fast.getNext().getNext() == null) {
+            return null;
+        }
+
+        slow = head;
+        while (slow != fast) {
+            slow = slow.getNext();
+            fast = fast.getNext();
+        }
+
+        return slow;
     }
 
 }

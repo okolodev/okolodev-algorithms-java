@@ -56,8 +56,55 @@ public class IntersectionOfTwoLinkedListsTest {
         };
     }
 
-    private ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        throw new UnsupportedOperationException("Implement me!");
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+
+        int lengthA = getLength(headA);
+        int lengthB = getLength(headB);
+
+        ListNode tailA = headA;
+        ListNode tailB = headB;
+
+        if (lengthA > lengthB) {
+            tailA = getNthNode(tailA, lengthA - lengthB);
+        } else if (lengthB > lengthA) {
+            tailB = getNthNode(tailB, lengthB - lengthA);
+        }
+
+        while (tailA != null) {
+            if (tailA == tailB) {
+                return tailA;
+            }
+
+            tailA = tailA.getNext();
+            tailB = tailB.getNext();
+        }
+
+        return null;
+    }
+
+    private ListNode getNthNode(ListNode head, int n) {
+        ListNode tail = head;
+
+        for (int i = 0; i < n; i++) {
+            tail = tail.getNext();
+        }
+
+        return tail;
+    }
+
+    private int getLength(ListNode head) {
+        int length = 0;
+
+        ListNode tail = head;
+        while (tail != null) {
+            length++;
+            tail = tail.getNext();
+        }
+
+        return length;
     }
 
 }
