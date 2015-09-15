@@ -28,7 +28,30 @@ public class SingleNumberIITest {
     }
 
     private int findSingleNumber(int[] numbers) {
-        throw new UnsupportedOperationException("Implement me!");
+        int ones = 0;
+        int twos = 0;
+
+        for (int n : numbers) {
+            int prevOnes = ones;
+            ones = (ones ^ n) & ~twos;
+            twos = (twos & ~n) | (prevOnes & n);
+
+            traceBits("n", n);
+            traceBits("prev ones", prevOnes);
+            traceBits("ones", ones);
+            traceBits("twos", twos);
+        }
+
+        traceBits("result", ones);
+
+        return ones;
+    }
+
+    private void traceBits(String name, int v) {
+        String paddedBits = String.format("%4s", Integer.toBinaryString(v))
+                .replace(' ', '0');
+        System.out.printf("%-10s%-5s%-5s%n", name, v, paddedBits);
+
     }
 
 }

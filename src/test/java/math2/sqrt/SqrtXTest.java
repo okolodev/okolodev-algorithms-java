@@ -32,7 +32,21 @@ public class SqrtXTest {
     }
 
     private double sqrt(double x) {
-        throw new UnsupportedOperationException("Implement me!");
+        double guess = 1;
+
+        while (!isGoodEnough(guess, x)) {
+            guess = guess(guess, x);
+        }
+
+        return guess;
+    }
+
+    private boolean isGoodEnough(double guess, double x) {
+        return Math.abs(guess * guess - x) / x < 1e-10;
+    }
+
+    private double guess(double guess, double x) {
+        return (guess + x / guess) / 2;
     }
 
 }

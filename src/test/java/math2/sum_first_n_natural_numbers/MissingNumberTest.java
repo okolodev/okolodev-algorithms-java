@@ -32,12 +32,18 @@ public class MissingNumberTest {
                 {new int[]{0, 2, 1}, 3},
                 {new int[]{0, 3, 1}, 2},
                 {new int[]{2, 3, 1}, 0}
-
         };
     }
 
     private int findMissingNumber(int[] numbers) {
-        throw new UnsupportedOperationException("Implement me!");
+        int n = numbers.length;
+        int sum = n * (n + 1) / 2;
+
+        for (int i : numbers) {
+            sum = sum - i;
+        }
+
+        return sum;
     }
 
 }
