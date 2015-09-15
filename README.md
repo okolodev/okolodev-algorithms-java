@@ -24,3 +24,14 @@
 - [Intersection of Two Linked Lists ](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 - [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 - [Linked List Cycle II ](https://leetcode.com/problems/linked-list-cycle-ii/)
+
+
+### 3 Math links
+
+- [Missing Number](https://leetcode.com/problems/missing-number/)
+- [The sum of the first n natural numbers](http://www.9math.com/book/sum-first-n-natural-numbers)
+- [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
+- ![Newton's method](http://tutorial.math.lamar.edu/Classes/CalcI/NewtonsMethod_files/image001.gif)
+- [**Video** Lecture 1.5 - Example: square roots with Newton's method](https://class.coursera.org/progfun-2012-001/lecture/6)
+- [Single Number](https://leetcode.com/problems/single-number/)
+- [Single Number II](https://leetcode.com/problems/single-number-ii/)
