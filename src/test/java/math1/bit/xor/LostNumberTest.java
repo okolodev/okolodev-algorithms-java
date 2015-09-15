@@ -32,11 +32,26 @@ public class LostNumberTest {
     }
 
     private int findLostNumber(int[] numbers) {
-        int xor = 0;
-        for (int i : numbers) {
-            xor = xor ^ i;
+        // x | y | r
+        // 0 | 0 | 0
+        // 0 | 1 | 1
+        // 1 | 0 | 1
+        // 1 | 1 | 0
+
+        // [1, 2, 1]
+        // e   acc
+        //     00
+        // 01  01
+        // 10  11
+        // 01  10 = 2
+
+        int acc = 0;
+
+        for (int n : numbers) {
+            acc = acc ^ n;
         }
-        return xor;
+
+        return acc;
     }
 
 }
