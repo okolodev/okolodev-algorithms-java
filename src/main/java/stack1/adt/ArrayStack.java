@@ -1,29 +1,33 @@
 package stack1.adt;
 
 public class ArrayStack<E> implements Stack<E> {
+    private final E[] holder;
+    private int next;
 
     public ArrayStack(int capacity) {
-        throw new UnsupportedOperationException("Implement me!");
+        holder = (E[]) new Object[capacity];
     }
 
     @Override
     public void push(E element) {
-        throw new UnsupportedOperationException("Implement me!");
+        holder[next++] = element;
     }
 
     @Override
     public E pop() {
-        throw new UnsupportedOperationException("Implement me!");
+        E element = holder[--next];
+        holder[next] = null;
+        return element;
     }
 
     @Override
     public E peek() {
-        throw new UnsupportedOperationException("Implement me!");
+        return holder[next - 1];
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Implement me!");
+        return next == 0;
     }
 
 }

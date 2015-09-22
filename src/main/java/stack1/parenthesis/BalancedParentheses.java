@@ -27,7 +27,19 @@ package stack1.parenthesis;
 public class BalancedParentheses {
 
     public boolean isValid(String parentheses) {
-        throw new UnsupportedOperationException("Implement me!");
+        int openCount = 0;
+
+        for (Character symbol : parentheses.toCharArray()) {
+            if (symbol == '(') {
+                openCount++;
+            } else if (openCount == 0) {
+                return false;
+            } else {
+                openCount--;
+            }
+        }
+
+        return openCount == 0;
     }
 
 }

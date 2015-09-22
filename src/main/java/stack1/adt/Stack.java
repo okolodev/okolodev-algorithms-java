@@ -5,7 +5,7 @@ package stack1.adt;
  * Last In First Out
  * </p>
  *
- * @see <a href"https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">Stack_(abstract_data_type)</a>
+ * @see <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">Stack_(abstract_data_type)</a>
  */
 public interface Stack<E> {
 

@@ -1,5 +1,8 @@
 package stack1.parenthesis;
 
+import stack1.adt.ArrayStack;
+import stack1.adt.Stack;
+
 /**
  * <h2>20 Valid Parentheses</h2>
  * <p>
@@ -18,7 +21,31 @@ package stack1.parenthesis;
 public class BalancedParenthesesII {
 
     public boolean isValid(String parentheses) {
-        throw new UnsupportedOperationException("Implement me!");
+        Stack<Character> openStack = new ArrayStack<>(parentheses.length());
+
+        for (Character symbol : parentheses.toCharArray()) {
+            if (symbol == '('
+                    || symbol == '{'
+                    || symbol == '[') {
+                openStack.push(symbol);
+            } else if (openStack.isEmpty()) {
+                return false;
+            } else if (symbol == ')') {
+                if (openStack.pop() != '(') {
+                    return false;
+                }
+            } else if (symbol == '}') {
+                if (openStack.pop() != '{') {
+                    return false;
+                }
+            } else if (symbol == ']') {
+                if (openStack.pop() != '[') {
+                    return false;
+                }
+            }
+        }
+
+        return openStack.isEmpty();
     }
 
 }

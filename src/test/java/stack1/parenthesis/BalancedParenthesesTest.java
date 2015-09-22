@@ -35,7 +35,8 @@ public class BalancedParenthesesTest {
             "())",
             "((((((())",
             "()))",
-            "(()()(()"
+            "(()()(()",
+            ")))((("
     })
     public void itShouldInvalidParenthesis(String parenthesis) {
         assertThat(validator.isValid(parenthesis), is(false));

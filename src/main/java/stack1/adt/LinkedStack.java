@@ -1,25 +1,28 @@
 package stack1.adt;
 
 public class LinkedStack<E> implements Stack<E> {
+    private ListNode<E> head;
 
     @Override
     public void push(E element) {
-        throw new UnsupportedOperationException("Implement me!");
+        head = new ListNode<>(element, head);
     }
 
     @Override
     public E pop() {
-        throw new UnsupportedOperationException("Implement me!");
+        E element = head.getValue();
+        head = head.getNext();
+        return element;
     }
 
     @Override
     public E peek() {
-        throw new UnsupportedOperationException("Implement me!");
+        return head.getValue();
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Implement me!");
+        return head == null;
     }
 
 }
