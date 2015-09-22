@@ -35,3 +35,9 @@
 - [**Video** Lecture 1.5 - Example: square roots with Newton's method](https://class.coursera.org/progfun-2012-001/lecture/6)
 - [Single Number](https://leetcode.com/problems/single-number/)
 - [Single Number II](https://leetcode.com/problems/single-number-ii/)
+
+### 4 Stack links
+- [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+- [Stack on Linked List](http://visualgo.net/list.html)
+- [Simple Balanced Parentheses](http://interactivepython.org/runestone/static/pythonds/BasicDS/SimpleBalancedParentheses.html)
+- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
