@@ -41,3 +41,16 @@
 - [Stack on Linked List](http://visualgo.net/list.html)
 - [Simple Balanced Parentheses](http://interactivepython.org/runestone/static/pythonds/BasicDS/SimpleBalancedParentheses.html)
 - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+
+### 5 Stack and Queue
+- [Min Stack](https://leetcode.com/problems/min-stack/)
+- [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+- [Queue (abstract data type)](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+- [Wikipedia Linked_list#Singly_linked_list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list)
+- [Queue](http://visualgo.net/)
+- [Circular buffer](https://en.wikipedia.org/wiki/Circular_buffer)
+- [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+- [Shunting-yard algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
+
+Participants: [@andreysobol](https://github.com/andreysobol), [@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
