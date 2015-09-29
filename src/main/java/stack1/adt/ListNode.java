@@ -2,11 +2,15 @@ package stack1.adt;
 
 public class ListNode<E> {
     private final E value;
-    private final ListNode<E> next;
+    private ListNode<E> next;
 
     public ListNode(E value, ListNode<E> next) {
         this.value = value;
         this.next = next;
+    }
+
+    public ListNode(E value) {
+        this(value, null);
     }
 
     public E getValue() {
@@ -15,6 +19,10 @@ public class ListNode<E> {
 
     public ListNode<E> getNext() {
         return next;
+    }
+
+    public void setNext(ListNode<E> next) {
+        this.next = next;
     }
 
 }
