@@ -1,25 +1,48 @@
 package stack_and_queue_5.adt;
 
+import stack1.adt.ListNode;
+
 public class LinkedQueue<E> implements Queue<E> {
+    private ListNode<E> front;
+    private ListNode<E> back;
+    private int size;
 
     @Override
     public void enqueue(E element) {
-        throw new UnsupportedOperationException("Implement me!");
+        ListNode<E> node = new ListNode<E>(element);
+
+        if (isEmpty()) {
+            front = node;
+            back = node;
+        } else {
+            back.setNext(node);
+            back = node;
+        }
+
+        size++;
     }
 
     @Override
     public E dequeue() {
-        throw new UnsupportedOperationException("Implement me!");
+        E element = front.getValue();
+        front = front.getNext();
+        size--;
+
+        if (isEmpty()) {
+            back = null;
+        }
+
+        return element;
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Implement me!");
+        return size == 0;
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Implement me!");
+        return size;
     }
 
 }

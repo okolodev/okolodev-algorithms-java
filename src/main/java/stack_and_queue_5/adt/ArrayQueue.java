@@ -4,29 +4,46 @@ package stack_and_queue_5.adt;
  * @see <a href="https://en.wikipedia.org/wiki/Circular_buffer">Circular buffer</a>
  */
 public class ArrayQueue<E> implements Queue<E> {
+    private E[] holder;
+    private int front;
+    private int back;
+    private int size;
 
     public ArrayQueue(int capacity) {
-        throw new UnsupportedOperationException("Implement me!");
+        holder = (E[]) new Object[capacity];
     }
 
     @Override
     public void enqueue(E element) {
-        throw new UnsupportedOperationException("Implement me!");
+        holder[back++] = element;
+
+        back = normalizeIndex(back);
+        size++;
+    }
+
+    private int normalizeIndex(int index) {
+        return index % holder.length;
     }
 
     @Override
     public E dequeue() {
-        throw new UnsupportedOperationException("Implement me!");
+        E element = holder[front];
+        holder[front++] = null;
+
+        front = normalizeIndex(front);
+        size--;
+
+        return element;
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Implement me!");
+        return size == 0;
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Implement me!");
+        return size;
     }
 
 }

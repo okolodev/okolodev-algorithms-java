@@ -1,6 +1,9 @@
 package stack_and_queue_5.applications;
 
 
+import stack1.adt.LinkedStack;
+import stack1.adt.Stack;
+
 /**
  * <p>
  * Evaluate Reverse Polish Notation
@@ -21,7 +24,31 @@ package stack_and_queue_5.applications;
 public class ReversePolishNotation {
 
     public int evaluate(String[] tokens) {
-        throw new UnsupportedOperationException("Implement me!");
+        Stack<Integer> stack = new LinkedStack<>();
+
+        for (String token : tokens) {
+            if ("+-*/".contains(token)) {
+                int b = stack.pop();
+                int a = stack.pop();
+                int result;
+
+                if ("+".equals(token)) {
+                    result = a + b;
+                } else if ("-".equals(token)) {
+                    result = a - b;
+                } else if ("*".equals(token)) {
+                    result = a * b;
+                } else {
+                    result = a / b;
+                }
+
+                stack.push(result);
+            } else {
+                stack.push(Integer.parseInt(token));
+            }
+        }
+
+        return stack.pop();
     }
 
 }

@@ -1,5 +1,8 @@
 package stack_and_queue_5.applications;
 
+import stack1.adt.LinkedStack;
+import stack1.adt.Stack;
+
 /**
  * <p>
  * Support the minimum element in a stack in constant time.
@@ -8,25 +11,37 @@ package stack_and_queue_5.applications;
  * @see <a href="https://leetcode.com/problems/min-stack/">Min Stack</a>
  */
 public class MinStack {
+    private Stack<Integer> stack = new LinkedStack<>();
+    private Stack<Integer> minimum = new LinkedStack<>();
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Implement me!");
+        return stack.isEmpty();
     }
 
     public void push(int element) {
-        throw new UnsupportedOperationException("Implement me!");
+        stack.push(element);
+
+        if (minimum.isEmpty()) {
+            minimum.push(element);
+        } else if (element <= minimum.peek()) {
+            minimum.push(element);
+        }
     }
 
     public int pop() {
-        throw new UnsupportedOperationException("Implement me!");
+        if (stack.peek() == minimum.peek()) {
+            minimum.pop();
+        }
+
+        return stack.pop();
     }
 
     public int peek() {
-        throw new UnsupportedOperationException("Implement me!");
+        return stack.peek();
     }
 
     public int getMin() {
-        throw new UnsupportedOperationException("Implement me!");
+        return minimum.peek();
     }
 
 }
