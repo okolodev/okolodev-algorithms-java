@@ -1,12 +1,10 @@
 package stack1.adt;
 
-import org.junit.Before;
-
 public class LinkedStackTest extends StackAbstractTest {
 
-    @Before
-    public void setUp() {
-        stack = new LinkedStack<>();
+    @Override
+    protected <E> Stack<E> createStack() {
+        return new LinkedStack<>();
     }
 
 }

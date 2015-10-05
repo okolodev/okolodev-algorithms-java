@@ -6,7 +6,9 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public abstract class StackAbstractTest {
-    protected Stack<Integer> stack;
+    private Stack<Integer> stack = createStack();
+
+    protected abstract <E> Stack<E> createStack();
 
     // is empty
     @Test
@@ -69,6 +71,56 @@ public abstract class StackAbstractTest {
 
         assertThat(stack.isEmpty(), is(true));
     }
+
+    // size
+    @Test
+    public void itShouldIncreaseSizeWhenElementsPushed() {
+        assertThat("Size mismatch", stack.size(), is(0));
+
+        stack.push(10);
+        assertThat("Size mismatch", stack.size(), is(1));
+
+        stack.push(9);
+        assertThat("Size mismatch", stack.size(), is(2));
+
+        stack.push(8);
+        assertThat("Size mismatch", stack.size(), is(3));
+
+        stack.push(7);
+        assertThat("Size mismatch", stack.size(), is(4));
+    }
+
+    @Test
+    public void itShouldDecreaseSizeWhenElementsPopped() {
+        stack.push(6);
+        stack.push(5);
+        stack.push(4);
+        stack.push(3);
+
+        assertThat("Size mismatch", stack.size(), is(4));
+
+        stack.pop();
+        assertThat("Size mismatch", stack.size(), is(3));
+
+        stack.pop();
+        assertThat("Size mismatch", stack.size(), is(2));
+
+        stack.pop();
+        assertThat("Size mismatch", stack.size(), is(1));
+
+        stack.pop();
+        assertThat("Size mismatch", stack.size(), is(0));
+    }
+
+    @Test
+    public void itShouldDecreaseSizeIfElementPeeked() {
+        stack.push(2);
+
+        stack.peek();
+
+        assertThat(stack.size(), is(1));
+    }
+
 
     @Test
     public void itShouldWorkLastInFirstOut() {

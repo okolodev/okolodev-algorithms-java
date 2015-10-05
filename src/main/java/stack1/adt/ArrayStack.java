@@ -30,4 +30,9 @@ public class ArrayStack<E> implements Stack<E> {
         return next == 0;
     }
 
+    @Override
+    public int size() {
+        return next;
+    }
+
 }
