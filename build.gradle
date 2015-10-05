@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'info.solidsoft.pitest'
 
 group = 'org.okolodev.algorithms.java'
 version = '0.0.1-SNAPSHOT'
@@ -33,3 +34,16 @@ test {
     exclude(["**/AllTests*"])
 }
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.6'
+    }
+}
+
+pitest {
+    targetClasses = ['meetup*']
+}
