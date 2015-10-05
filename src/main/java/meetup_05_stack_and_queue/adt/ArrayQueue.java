@@ -1,4 +1,4 @@
-package stack_and_queue_5.adt;
+package meetup_05_stack_and_queue.adt;
 
 /**
  * @see <a href="https://en.wikipedia.org/wiki/Circular_buffer">Circular buffer</a>

@@ -1,9 +1,9 @@
-package stack_and_queue_5.applications;
+package meetup_05_stack_and_queue.applications;
 
 import stack1.adt.LinkedStack;
 import stack1.adt.Stack;
-import stack_and_queue_5.adt.LinkedQueue;
-import stack_and_queue_5.adt.Queue;
+import meetup_05_stack_and_queue.adt.LinkedQueue;
+import meetup_05_stack_and_queue.adt.Queue;
 
 import java.util.HashMap;
 import java.util.Map;

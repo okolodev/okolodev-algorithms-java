@@ -1,4 +1,4 @@
-package stack_and_queue_5.applications;
+package meetup_05_stack_and_queue.applications;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;

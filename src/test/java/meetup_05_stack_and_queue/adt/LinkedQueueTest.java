@@ -1,4 +1,4 @@
-package stack_and_queue_5.adt;
+package meetup_05_stack_and_queue.adt;
 
 public class LinkedQueueTest extends QueueAbstractTest {
 
