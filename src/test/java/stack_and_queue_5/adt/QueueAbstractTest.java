@@ -43,6 +43,31 @@ public abstract class QueueAbstractTest {
         assertThat(queue.isEmpty(), is(true));
     }
 
+    // peek
+    @Test
+    public void itShouldPeekEnqueuedElement() {
+        queue.enqueue('A');
+
+
+        assertThat(queue.peek(), is('A'));
+    }
+
+    @Test
+    public void peekingSingleElementShouldNotMakeQueueEmpty() {
+        queue.enqueue('A');
+
+        queue.peek();
+
+        assertThat(queue.isEmpty(), is(false));
+    }
+
+    @Test
+    public void peekShouldBeIdempotent() {
+        queue.enqueue('A');
+
+        assertThat(queue.peek(), is(queue.peek()));
+    }
+
     @Test
     public void itShouldIncreaseSizeWhenElementsEnqueued() {
         assertThat("Size mismatch", queue.size(), is(0));
@@ -80,6 +105,15 @@ public abstract class QueueAbstractTest {
 
         queue.dequeue();
         assertThat("Size mismatch", queue.size(), is(0));
+    }
+
+    @Test
+    public void itShouldDecreaseSizeIfElementPeeked() {
+        queue.enqueue('A');
+
+        queue.peek();
+
+        assertThat(queue.size(), is(1));
     }
 
     @Test

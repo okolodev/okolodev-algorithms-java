@@ -36,6 +36,11 @@ public class LinkedQueue<E> implements Queue<E> {
     }
 
     @Override
+    public E peek() {
+        return front.getValue();
+    }
+
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }
