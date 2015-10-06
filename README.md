@@ -54,3 +54,18 @@
 
 Participants: [@andreysobol](https://github.com/andreysobol), [@SunnyMagadan](https://github.com/SunnyMagadan)<br />
 Host: [@ffbit](https://github.com/ffbit)
+
+### 6 Stack, Queue, Dynamic List and Binary Search
+- [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+- [Queue (abstract data type)](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+- [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+- [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+- [List (abstract data type)](https://en.wikipedia.org/wiki/List_(abstract_data_type))
+- [Linked list](https://en.wikipedia.org/wiki/Linked_list)
+- [Doubly linked list](https://en.wikipedia.org/wiki/Doubly_linked_list)
+- [Dynamic array](https://en.wikipedia.org/wiki/Dynamic_array)
+- [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+
+Participants: [@andreysobol](https://github.com/andreysobol),
+[@akavrt](https://github.com/akavrt), [kirpichenko](https://github.com/kirpichenko)<br />
+Host: [@ffbit](https://github.com/ffbit)
