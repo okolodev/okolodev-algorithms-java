@@ -67,5 +67,5 @@ Host: [@ffbit](https://github.com/ffbit)
 - [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
 Participants: [@andreysobol](https://github.com/andreysobol),
-[@akavrt](https://github.com/akavrt), [kirpichenko](https://github.com/kirpichenko)<br />
+[@akavrt](https://github.com/akavrt), [@kirpichenko](https://github.com/kirpichenko)<br />
 Host: [@ffbit](https://github.com/ffbit)
