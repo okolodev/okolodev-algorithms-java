@@ -6,7 +6,23 @@ package meetup_07_arrays;
 public class MajorityElement {
 
     public int majorityElement(int[] elements) {
-        throw new UnsupportedOperationException("Implement me!");
+        int candidate = elements[0];
+        int votes = 1;
+
+        for (int i = 1; i < elements.length; i++) {
+            if (candidate == elements[i]) {
+                votes++;
+            } else {
+                votes--;
+
+                if (votes == 0) {
+                    candidate = elements[i];
+                    votes = 1;
+                }
+            }
+        }
+
+        return candidate;
     }
 
 }

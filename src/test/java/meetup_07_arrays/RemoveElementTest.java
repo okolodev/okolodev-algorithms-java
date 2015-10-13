@@ -31,6 +31,9 @@ public class RemoveElementTest {
                 {new int[]{1, 2, 3}, 1, 2, new int[]{2, 3, 1}},
                 {new int[]{1, 2, 3}, 3, 2, new int[]{1, 2, 3}},
 
+                {new int[]{7, 7, 7, 7, 2, 7, 3}, 7, 2,
+                        new int[]{2, 3, 7, 7, 7, 7, 7}},
+
                 {new int[]{1, 2, 3, 2, 4, 2, 2, 5}, 2, 4,
                         new int[]{1, 3, 4, 5, 2, 2, 2, 2}}
         };
