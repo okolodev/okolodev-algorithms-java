@@ -69,3 +69,17 @@ Host: [@ffbit](https://github.com/ffbit)
 Participants: [@andreysobol](https://github.com/andreysobol),
 [@akavrt](https://github.com/akavrt), [@kirpichenko](https://github.com/kirpichenko)<br />
 Host: [@ffbit](https://github.com/ffbit)
+
+### 7 Array
+- [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+- [Majority Element](https://leetcode.com/problems/majority-element/)
+- [A Linear Time Majority Vote Algorithm](http://www.cs.utexas.edu/~moore/best-ideas/mjrty/)
+- [Plus One](https://leetcode.com/problems/plus-one/)
+- [Remove Element](https://leetcode.com/problems/remove-element/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@akavrt](https://github.com/akavrt),
+[@kirpichenko](https://github.com/kirpichenko),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
