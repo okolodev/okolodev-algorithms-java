@@ -83,3 +83,17 @@ Participants:
 [@kirpichenko](https://github.com/kirpichenko),
 [@SunnyMagadan](https://github.com/SunnyMagadan)<br />
 Host: [@ffbit](https://github.com/ffbit)
+
+
+### 8 Binary Tree Traversal
+- [Tree (data structure)](https://en.wikipedia.org/wiki/Tree_(data_structure))
+- [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)
+- [Leetcode 144 Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+- [Leetcode 94 Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+- [Leetcode 145 Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@akavrt](https://github.com/akavrt),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
