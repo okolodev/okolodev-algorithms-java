@@ -24,7 +24,7 @@ public abstract class InOrderTraversalAbstractTest {
         assertThat(traversal.inOrderTraversal(root), is(inorder));
     }
 
-    private Object[][] data() {
+    protected Object[][] data() {
         return new Object[][]{
                 {null, asList()},
 
