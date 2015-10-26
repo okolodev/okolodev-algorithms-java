@@ -1,17 +1,17 @@
 package meetup_08_tree_traversal.applications;
 
+import meetup_06_stack_queue_dynamic_array.adt.ArrayDynamicList;
+import meetup_06_stack_queue_dynamic_array.adt.DynamicList;
 import meetup_08_tree_traversal.adt.TreeNode;
 import stack1.adt.LinkedStack;
 import stack1.adt.Stack;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class PreOrderTraversalIteratively<E> implements PreOrderTraversal<E> {
 
     @Override
-    public List<E> preOrderTraversal(TreeNode<E> root) {
-        List<E> traversal = new ArrayList<>();
+    public DynamicList<E> preOrderTraversal(TreeNode<E> root) {
+        DynamicList<E> traversal = new ArrayDynamicList<>();
 
         if (root == null) {
             return traversal;

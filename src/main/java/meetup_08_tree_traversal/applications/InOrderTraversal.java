@@ -1,8 +1,8 @@
 package meetup_08_tree_traversal.applications;
 
+import meetup_06_stack_queue_dynamic_array.adt.DynamicList;
 import meetup_08_tree_traversal.adt.TreeNode;
 
-import java.util.List;
 
 /**
  * <h2>94 Binary Tree Inorder Traversal</h2>
@@ -28,6 +28,6 @@ import java.util.List;
  */
 public interface InOrderTraversal<E> {
 
-    List<E> inOrderTraversal(TreeNode<E> root);
+    DynamicList<E> inOrderTraversal(TreeNode<E> root);
 
 }

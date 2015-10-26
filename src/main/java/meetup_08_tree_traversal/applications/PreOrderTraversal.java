@@ -1,8 +1,8 @@
 package meetup_08_tree_traversal.applications;
 
+import meetup_06_stack_queue_dynamic_array.adt.DynamicList;
 import meetup_08_tree_traversal.adt.TreeNode;
 
-import java.util.List;
 
 /**
  * <h2>144 Binary Tree Preorder Traversal</h2>
@@ -29,6 +29,6 @@ import java.util.List;
  */
 public interface PreOrderTraversal<E> {
 
-    List<E> preOrderTraversal(TreeNode<E> root);
+    DynamicList<E> preOrderTraversal(TreeNode<E> root);
 
 }

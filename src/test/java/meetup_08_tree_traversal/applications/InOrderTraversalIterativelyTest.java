@@ -1,10 +1,9 @@
 package meetup_08_tree_traversal.applications;
 
 import junitparams.Parameters;
+import meetup_06_stack_queue_dynamic_array.adt.DynamicList;
 import meetup_08_tree_traversal.adt.TreeNode;
 import org.junit.Test;
-
-import java.util.List;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -20,7 +19,7 @@ public class InOrderTraversalIterativelyTest
     @Test
     @Parameters(method = "data")
     public void itShouldTraverseInOrderFirstTry(TreeNode root,
-                                                List<Integer> inorder) {
+                                                DynamicList<Integer> inorder) {
         InOrderTraversalIteratively<Integer> traversal = createTraversal();
 
         assertThat(traversal.inOrderTraversalFirstTry(root), is(inorder));

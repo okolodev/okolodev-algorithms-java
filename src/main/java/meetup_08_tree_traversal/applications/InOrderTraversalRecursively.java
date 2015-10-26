@@ -1,15 +1,15 @@
 package meetup_08_tree_traversal.applications;
 
+import meetup_06_stack_queue_dynamic_array.adt.ArrayDynamicList;
+import meetup_06_stack_queue_dynamic_array.adt.DynamicList;
 import meetup_08_tree_traversal.adt.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class InOrderTraversalRecursively<E> implements InOrderTraversal<E> {
 
     @Override
-    public List<E> inOrderTraversal(TreeNode<E> root) {
-        List<E> traversal = new ArrayList<>();
+    public DynamicList<E> inOrderTraversal(TreeNode<E> root) {
+        DynamicList<E> traversal = new ArrayDynamicList<>();
 
         if (root == null) {
             return traversal;
@@ -20,7 +20,7 @@ public class InOrderTraversalRecursively<E> implements InOrderTraversal<E> {
         return traversal;
     }
 
-    private void inOrderTraversal(TreeNode<E> root, List<E> traversal) {
+    private void inOrderTraversal(TreeNode<E> root, DynamicList<E> traversal) {
         if (root == null) {
             return;
         }

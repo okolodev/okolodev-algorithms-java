@@ -2,25 +2,24 @@ package meetup_08_tree_traversal.applications;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
+import meetup_06_stack_queue_dynamic_array.adt.DynamicList;
 import meetup_08_tree_traversal.adt.TreeNode;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.List;
-
-import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(JUnitParamsRunner.class)
-public abstract class PostOrderTraversalAbstractTest {
+public abstract class PostOrderTraversalAbstractTest
+        extends TraversalAbstractTest {
     private PostOrderTraversal<Integer> traversal = createTraversal();
 
     protected abstract PostOrderTraversal<Integer> createTraversal();
 
     @Test
     @Parameters(method = "data")
-    public void itShouldTraverseInOrder(TreeNode root, List<Integer> postOrder) {
+    public void itShouldTraverseInOrder(TreeNode root, DynamicList<Integer> postOrder) {
         assertThat(traversal.postOrderTraversal(root), is(postOrder));
     }
 
