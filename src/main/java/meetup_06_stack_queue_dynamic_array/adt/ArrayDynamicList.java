@@ -1,10 +1,19 @@
 package meetup_06_stack_queue_dynamic_array.adt;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class ArrayDynamicList<E> implements DynamicList<E> {
     private E[] holder = (E[]) new Object[]{};
     private int size;
+
+    public ArrayDynamicList() {
+    }
+
+    public ArrayDynamicList(E... elements) {
+        holder = Arrays.copyOf(elements, elements.length);
+        size = holder.length;
+    }
 
     @Override
     public void add(E element) {
@@ -76,6 +85,52 @@ public class ArrayDynamicList<E> implements DynamicList<E> {
 
     public int capacity() {
         return holder.length;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringRepresentation = new StringBuilder("[");
+
+        String separator = "";
+        for (int i = 0; i < size; i++) {
+            stringRepresentation.append(separator)
+                    .append(holder[i]);
+            separator = ", ";
+        }
+
+        stringRepresentation.append("]");
+
+        return stringRepresentation.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        // not efficient, but quickly-written implementation.
+        return toString().hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof DynamicList)) {
+            return false;
+        }
+
+        DynamicList<E> that = (DynamicList<E>) o;
+
+        if (size != that.size()) {
+            return false;
+        }
+
+        for (int i = 0; i < size; i++) {
+            if (!Objects.equals(get(i), that.get(i))) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }

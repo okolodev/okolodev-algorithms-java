@@ -7,4 +7,9 @@ public class LinkedDynamicListTest extends DynamicListAbstractTest {
         return new LinkedDynamicList<>();
     }
 
+    @Override
+    protected <E> DynamicList<E> createList(E... elements) {
+        return new LinkedDynamicList<>(elements);
+    }
+
 }

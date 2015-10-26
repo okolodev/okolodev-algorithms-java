@@ -1,14 +1,22 @@
 package meetup_06_stack_queue_dynamic_array.adt;
 
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+import static org.hamcrest.Matchers.hasToString;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
 
+@RunWith(JUnitParamsRunner.class)
 public abstract class DynamicListAbstractTest {
     private DynamicList<Character> list = createList();
 
     protected abstract <E> DynamicList<E> createList();
+
+    protected abstract <E> DynamicList<E> createList(E... elements);
 
     @Test
     public void itShouldBeEmptyWhenCreated() {
@@ -160,6 +168,81 @@ public abstract class DynamicListAbstractTest {
         list.add('A');
 
         list.remove(list.size() + 1);
+    }
+
+    @Test
+    @Parameters(method = "dynamicListsForToString")
+    public void itShouldListElementsInToStringMethod(DynamicList<?> dynamicList,
+                                                     String toString) {
+        assertThat(dynamicList, hasToString(toString));
+    }
+
+    @Test
+    public void itShouldAllowPassingElementsToConstructor() {
+        DynamicList<Integer> list = createList(1, 2, 3, 4, 5, 6);
+
+        assertThat("Element mismatch", list.get(0), is(1));
+        assertThat("Element mismatch", list.get(1), is(2));
+        assertThat("Element mismatch", list.get(2), is(3));
+        assertThat("Element mismatch", list.get(3), is(4));
+        assertThat("Element mismatch", list.get(4), is(5));
+        assertThat("Element mismatch", list.get(5), is(6));
+    }
+
+    private Object[][] dynamicListsForToString() {
+        return new Object[][]{
+                {createList(), "[]"},
+                {createList(1), "[1]"},
+                {createList(2, 3), "[2, 3]"},
+                {createList(1, 2, 3), "[1, 2, 3]"}
+        };
+    }
+
+    @Test
+    @Parameters(method = "equalDynamicLists")
+    public void itShouldBeEqualToAnotherDynamicList(
+            DynamicList<Integer> firstList,
+            DynamicList<Integer> secondList) {
+        assertThat(firstList, is(secondList));
+    }
+
+    @Test
+    @Parameters(method = "equalDynamicLists")
+    public void equalDynamicListsShouldHaveEqualHashCodes(
+            DynamicList<Integer> firstList,
+            DynamicList<Integer> secondList) {
+        assertThat(firstList.hashCode(), is(secondList.hashCode()));
+    }
+
+    private Object[][] equalDynamicLists() {
+        return new Object[][]{
+                {list, list},
+                {createList(), createList()},
+                {createList(1), createList(1)},
+                {createList(2, 3), createList(2, 3)},
+                {createList(1, 2, 3), createList(1, 2, 3)},
+                {createList(1, 2, 3, 4), createList(1, 2, 3, 4)}
+        };
+    }
+
+    @Test
+    @Parameters(method = "unequalDynamicLists")
+    public void itShouldNotBeEqualToAnotherDynamicList(
+            DynamicList<Integer> firstList,
+            DynamicList<Integer> secondList) {
+        assertThat(firstList, is(not(secondList)));
+    }
+
+    private Object[][] unequalDynamicLists() {
+        return new Object[][]{
+                {createList(), null},
+                {null, createList()},
+                {createList(1), createList()},
+                {createList(), createList(1)},
+                {createList(3, 2), createList(2, 3)},
+                {createList(1, 2, 3), createList(3, 2, 4)},
+                {createList(1, 2, 3, 4), createList(1, 2, 3, 4, 5)}
+        };
     }
 
 }

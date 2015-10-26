@@ -13,6 +13,11 @@ public class ArrayDynamicListTest extends DynamicListAbstractTest {
         return new ArrayDynamicList<>();
     }
 
+    @Override
+    protected <E> DynamicList<E> createList(E... elements) {
+        return new ArrayDynamicList<>(elements);
+    }
+
     @Test
     public void itShouldTwoTimesIncreaseCapacityWhenElementsAdded() {
         assertThat("Capacity mismatch", list.capacity(), is(0));
