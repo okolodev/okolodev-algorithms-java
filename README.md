@@ -6,6 +6,17 @@
 
 ## Materials
 
+### 9 Binary Tree Traversal, Height and (De)Serialization
+ - [Wikipedia Level-order](https://en.wikipedia.org/wiki/Tree_traversal#/media/File:Sorted_binary_tree_breadth-first_traversal.svg)
+ - [Leetcode 102 Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+ - [Leetcode 104 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+ - [Leetcode 297 Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan), [@kirpichenko](https://github.com/kirpichenko), [@atermenji](https://github.com/atermenji), [@DZozulya](https://github.com/DZozulya)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 8 Binary Tree Traversal
 - [Tree (data structure)](https://en.wikipedia.org/wiki/Tree_(data_structure))
 - [Tree traversal](https://en.wikipedia.org/wiki/Tree_traversal)
