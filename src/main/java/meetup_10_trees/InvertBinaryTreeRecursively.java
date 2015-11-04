@@ -6,7 +6,22 @@ public class InvertBinaryTreeRecursively<E> implements InvertBinaryTree<E> {
 
     @Override
     public TreeNode<E> invertTree(TreeNode<E> root) {
-        throw new UnsupportedOperationException("Implement me!");
+        if (root == null) {
+            return null;
+        }
+
+        swapChildren(root);
+
+        invertTree(root.getLeft());
+        invertTree(root.getRight());
+
+        return root;
+    }
+
+    private void swapChildren(TreeNode<E> root) {
+        TreeNode<E> tmp = root.getLeft();
+        root.setLeft(root.getRight());
+        root.setRight(tmp);
     }
 
 }

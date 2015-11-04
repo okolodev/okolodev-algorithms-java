@@ -18,30 +18,27 @@ public class LevelOrderTraversalLeetcode<E> {
             return traversal;
         }
 
-        Queue<TreeNode<E>> currentLevel = new LinkedQueue<>();
-        Queue<TreeNode<E>> nextLevel = new LinkedQueue<>();
+        Queue<TreeNode<E>> queue = new LinkedQueue<>();
 
-        currentLevel.enqueue(root);
+        queue.enqueue(root);
 
-        while (!currentLevel.isEmpty()) {
+        while (!queue.isEmpty()) {
             DynamicList<E> currentLevelTraversal = new ArrayDynamicList<>();
+            int currentLevelNodeNumber = queue.size();
 
-            while (!currentLevel.isEmpty()) {
-                TreeNode<E> current = currentLevel.dequeue();
+            for (int i = 0; i < currentLevelNodeNumber; i++) {
+                TreeNode<E> current = queue.dequeue();
 
                 currentLevelTraversal.add(current.getValue());
 
                 if (current.getLeft() != null) {
-                    nextLevel.enqueue(current.getLeft());
+                    queue.enqueue(current.getLeft());
                 }
 
                 if (current.getRight() != null) {
-                    nextLevel.enqueue(current.getRight());
+                    queue.enqueue(current.getRight());
                 }
             }
-
-            currentLevel = nextLevel;
-            nextLevel = new LinkedQueue<>();
 
             traversal.add(currentLevelTraversal);
         }
