@@ -9,36 +9,42 @@ import java.awt.*;
 public class TreeGroupLayoutDemo {
     public static boolean RIGHT_TO_LEFT = false;
 
-    public static void addComponentsToPane(GroupLayout layout) {
+    public static void addComponentsToPane(GroupLayout layout, JFrame frame) {
+        String treeData = "[3,9,20,#,#,15,7]";
+
         JLabel contentsLabel = new JLabel("Tree contents:");
-        JTextField contentsTextField = new JTextField("field");
+        JTextField contentsTextField = new JTextField(treeData);
 
         Insets buttonMargin = new Insets(0, 0, 0, 0);
-        JButton serializeButton = new JButton("Serialize");
-        serializeButton.setMargin(buttonMargin);
-        JButton deserializeButton = new JButton("Deserialize");
-        deserializeButton.setMargin(buttonMargin);
+//        JButton serializeButton = new JButton("Serialize");
+//        serializeButton.setMargin(buttonMargin);
 
         TreeSerializationCodec codec = new TreeSerializationCodec();
-        TreeNode<Integer> tree = codec.deserialize("[3,9,20,#,#,15,7]");
+        TreeNode<Integer> tree = codec.deserialize(treeData);
         TreePanel treePanel = new TreePanel(tree);
+
+        JButton deserializeButton = new JButton("Deserialize");
+        deserializeButton.setMargin(buttonMargin);
+        DeserializeActionListener deserializationListener =
+                new DeserializeActionListener(treePanel, contentsTextField, frame);
+        deserializeButton.addActionListener(deserializationListener);
 
         layout.setHorizontalGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-//                        .addGroup(layout.createSequentialGroup()
-//                                .addComponent(contentsLabel)
-//                                .addComponent(contentsTextField)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(contentsLabel)
+                                .addComponent(contentsTextField)
 //                                .addComponent(serializeButton)
-//                                .addComponent(deserializeButton))
+                                .addComponent(deserializeButton))
                         .addComponent(treePanel)));
 
         layout.setVerticalGroup(layout.createSequentialGroup()
-//                .addGroup(layout.createSequentialGroup()
-//                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-//                                .addComponent(contentsLabel)
-//                                .addComponent(contentsTextField)
+                .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(contentsLabel)
+                                .addComponent(contentsTextField)
 //                                .addComponent(serializeButton)
-//                                .addComponent(deserializeButton)))
+                                .addComponent(deserializeButton)))
                 .addComponent(treePanel));
     }
 
@@ -54,7 +60,7 @@ public class TreeGroupLayoutDemo {
         layout.setAutoCreateGaps(true);
         layout.setAutoCreateContainerGaps(true);
 
-        addComponentsToPane(layout);
+        addComponentsToPane(layout, frame);
 
         frame.pack();
         frame.setVisible(true);
@@ -77,11 +83,7 @@ public class TreeGroupLayoutDemo {
 
         //Schedule a job for the event dispatch thread:
         //creating and showing this application's GUI.
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });
+        SwingUtilities.invokeLater(() -> createAndShowGUI());
     }
 
 }
