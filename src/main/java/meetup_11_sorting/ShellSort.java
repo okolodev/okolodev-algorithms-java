@@ -4,7 +4,24 @@ public class ShellSort<E extends Comparable<E>> implements Sort<E> {
 
     @Override
     public E[] sort(E[] elements) {
-        throw new UnsupportedOperationException("Implement me!");
+        int n = elements.length;
+
+        int step = 1;
+        while (step < n / 3) {
+            step = step * 3 + 1;
+        }
+
+        while (step > 0) {
+            for (int i = step; i < n; i++) {
+                for (int j = i; j >= step && less(elements[j], elements[j - step]); j--) {
+                    swap(elements, j, j - step);
+                }
+            }
+
+            step = step / 3;
+        }
+
+        return elements;
     }
 
     private boolean less(E a, E b) {
