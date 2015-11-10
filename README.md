@@ -6,6 +6,21 @@
 
 ## Materials
 
+### 11 Sorting
+ - [Wikipedia Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
+ - [Wikipedia Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort)
+ - [Wikipedia Shellsort](https://en.wikipedia.org/wiki/Shellsort)
+ - [Wikipedia Merge sort Top Down](https://en.wikipedia.org/wiki/Merge_sort#Top-down_implementation)
+ - [Wikipedia Merge sort Bottom Up](https://en.wikipedia.org/wiki/Merge_sort#Bottom-up_implementation)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@akavrt](https://github.com/akavrt),
+[@DZozulya](https://github.com/DZozulya),
+[@kirpichenko](https://github.com/kirpichenko),
+[@SunnyMagadan](https://github.com/SunnyMagadan),<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 10 Binary Tree
  - [Leetcode 199 Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
  - [Leetcode 100 Same Tree](https://leetcode.com/problems/same-tree/)
