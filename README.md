@@ -6,7 +6,22 @@
 
 ## Materials
 
+### 12 Sorting
+ - [Sorting Algorithm Animations](http://www.sorting-algorithms.com/)
+ - [Wikipedia Quicksort](https://en.wikipedia.org/wiki/Quicksort)
+ - [QUICKSORT IS OPTIMAL by Robert Sedgewick and Jon Bentley](http://www.sorting-algorithms.com/static/QuicksortIsOptimal.pdf)
+ - [Wikipedia Inversion](https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics))
+ - ![inversions problem](src/main/resources/meetup_12_sorting_ii/inversions-00-problem.jpg)
+ - ![inverisons a solution](src/main/resources/meetup_12_sorting_ii/inversions-01-bottom-up-merge-sort-solution.jpg)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@atermenji](https://github.com/atermenji),
+[@kirpichenko](https://github.com/kirpichenko)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 11 Sorting
+ - [Sorting Algorithm Animations](http://www.sorting-algorithms.com/)
  - [Wikipedia Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
  - [Wikipedia Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort)
  - [Wikipedia Shellsort](https://en.wikipedia.org/wiki/Shellsort)
