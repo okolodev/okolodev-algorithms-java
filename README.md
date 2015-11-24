@@ -6,7 +6,19 @@
 
 ## Materials
 
-### 12 Sorting
+### 13 Sorting III
+ - [Sorting Algorithm Animations](http://www.sorting-algorithms.com/)
+ - [Wikipedia Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort)
+ - [Wikipedia Binary heap](https://en.wikipedia.org/wiki/Binary_heap#Insert)
+ - [Wikipedia Heapsort](https://en.wikipedia.org/wiki/Heapsort)
+ - [![Not only is that terrible in general, but you just KNOW Billy's going to open the root present first, and then everyone will have to wait while the heap is rebuilt.](https://imgs.xkcd.com/comics/tree.png)](https://xkcd.com/835/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
+### 12 Sorting II
  - [Sorting Algorithm Animations](http://www.sorting-algorithms.com/)
  - [Wikipedia Quicksort](https://en.wikipedia.org/wiki/Quicksort)
  - [QUICKSORT IS OPTIMAL by Robert Sedgewick and Jon Bentley](http://www.sorting-algorithms.com/static/QuicksortIsOptimal.pdf)
@@ -20,7 +32,7 @@ Participants:
 [@kirpichenko](https://github.com/kirpichenko)<br />
 Host: [@ffbit](https://github.com/ffbit)
 
-### 11 Sorting
+### 11 Sorting I
  - [Sorting Algorithm Animations](http://www.sorting-algorithms.com/)
  - [Wikipedia Selection sort](https://en.wikipedia.org/wiki/Selection_sort)
  - [Wikipedia Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort)
@@ -33,7 +45,7 @@ Participants:
 [@akavrt](https://github.com/akavrt),
 [@DZozulya](https://github.com/DZozulya),
 [@kirpichenko](https://github.com/kirpichenko),
-[@SunnyMagadan](https://github.com/SunnyMagadan),<br />
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
 Host: [@ffbit](https://github.com/ffbit)
 
 ### 10 Binary Tree
@@ -44,7 +56,7 @@ Host: [@ffbit](https://github.com/ffbit)
 Participants:
 [@andreysobol](https://github.com/andreysobol),
 [@akavrt](https://github.com/akavrt),
-[@SunnyMagadan](https://github.com/SunnyMagadan),<br />
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
 Host: [@ffbit](https://github.com/ffbit)
 
 ### 9 Binary Tree Traversal, Height and (De)Serialization
