@@ -6,6 +6,24 @@
 
 ## Materials
 
+### 14 MultiWay Merge and Dynamic Programming
+ - [Leetcode 23 Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+ - [Wikipedia Binary heap](https://en.wikipedia.org/wiki/Binary_heap#Insert)
+ - [Wikipedia Heapsort](https://en.wikipedia.org/wiki/Heapsort)
+ - [Wikipedia Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
+ - [Leetcode 62 Unique Paths](https://leetcode.com/problems/unique-paths/)<br />
+   ![robot_maze](http://leetcode.com/wp-content/uploads/2014/12/robot_maze.png)<br />
+   ![unique paths](src/main/resources/meetup_14_multiway_merge_and_dynamic_programming/unique-paths.png)
+ - [Wikipedia Pascal's triangle](https://en.wikipedia.org/wiki/Pascal%27s_triangle)<br />![Pascal's triangles](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pascal%27s_triangle_5.svg/375px-Pascal%27s_triangle_5.svg.png)
+ - [Wikipedia Binomial_coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient)
+ - [Wikipedia Binomial_coefficient Multiplicative_formula](https://en.wikipedia.org/wiki/Binomial_coefficient#Multiplicative_formula)
+ - [Leetcode 63 Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@DZozulya](https://github.com/DZozulya)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 13 Sorting III
  - [Sorting Algorithm Animations](http://www.sorting-algorithms.com/)
  - [Wikipedia Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort)
