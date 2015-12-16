@@ -6,6 +6,21 @@
 
 ## Materials
 
+### Dynamic Programming II
+ - [Wikipedia Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
+ - [Leetcode 70 Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+ - ![climbing stairs](src/main/resources/meetup_15_dynamic_programming_ii/climbing-stairs.png)
+ - [Wikipedia Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
+ - [Leetcode 198 House Robber](https://leetcode.com/problems/house-robber/)
+ - [Leetcode 279 Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan),
+[@stanislaw](https://github.com/stanislaw),
+[@DZozulya](https://github.com/DZozulya)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 14 MultiWay Merge and Dynamic Programming
  - [Leetcode 23 Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
  - [Wikipedia Binary heap](https://en.wikipedia.org/wiki/Binary_heap#Insert)
