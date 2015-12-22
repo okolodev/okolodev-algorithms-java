@@ -6,7 +6,19 @@
 
 ## Materials
 
-### Dynamic Programming II
+### 16 Dynamic Programming III
+ - [Wikipedia Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
+ - [Leetcode 120 Triangle](https://leetcode.com/problems/triangle/)
+ - [Leetcode 72 Edit Distance](https://leetcode.com/problems/edit-distance/)
+ - [Dan Jurafsky - Min Edit Distance](https://web.stanford.edu/class/cs124/lec/med.pdf)
+ - [Wikipedia Edit Distance](https://en.wikipedia.org/wiki/Edit_distance)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@DZozulya](https://github.com/DZozulya)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
+### 15 Dynamic Programming II
  - [Wikipedia Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
  - [Leetcode 70 Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
  - ![climbing stairs](src/main/resources/meetup_15_dynamic_programming_ii/climbing-stairs.png)
