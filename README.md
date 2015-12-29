@@ -6,6 +6,15 @@
 
 ## Materials
 
+### 17 Dictionary (Hash Table)
+ - [Wikipedia Hash table](https://en.wikipedia.org/wiki/Hash_table)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan),
+[@DZozulya](https://github.com/DZozulya)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 16 Dynamic Programming III
  - [Wikipedia Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming)
  - [Leetcode 120 Triangle](https://leetcode.com/problems/triangle/)
