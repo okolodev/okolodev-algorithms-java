@@ -2,14 +2,12 @@ package meetup_14_multiway_merge_and_dynamic_programming;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-@Ignore
 @RunWith(JUnitParamsRunner.class)
 public class MultiWayMergeTest {
     private MultiWayMerge<Integer> merger = new MultiWayMerge<>();

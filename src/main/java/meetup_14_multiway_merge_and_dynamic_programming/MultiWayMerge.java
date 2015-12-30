@@ -74,27 +74,22 @@ class MinBinaryHeap<E extends Comparable<E>> {
 
     void insert(E element) {
         heap[size++] = element;
-        heapify((size - 1) / 2);
+        heapifyUp();
     }
 
-    private void heapify(int rootIndex) {
-        int leftChildIndex = rootIndex * 2 + 1;
-        int rightChildIndex = rootIndex * 2 + 2;
-        int lestElementIndex = rootIndex;
+    private void heapifyUp() {
+        heapifyUp(size - 1);
+    }
 
-        if (leftChildIndex < size
-                && greater(heap[lestElementIndex], heap[leftChildIndex])) {
-            lestElementIndex = leftChildIndex;
+    private void heapifyUp(int childIndex) {
+        if (childIndex == 0) {
+            return;
         }
 
-        if (rightChildIndex < size
-                && greater(heap[lestElementIndex], heap[rightChildIndex])) {
-            lestElementIndex = rightChildIndex;
-        }
-
-        if (lestElementIndex != rootIndex) {
-            swap(rootIndex, lestElementIndex);
-            heapify(lestElementIndex);
+        int parentIndex = (childIndex - 1) / 2;
+        if (greater(heap[parentIndex], heap[childIndex])) {
+            swap(parentIndex, childIndex);
+            heapifyUp(parentIndex);
         }
     }
 
@@ -111,9 +106,30 @@ class MinBinaryHeap<E extends Comparable<E>> {
     E remove() {
         swap(0, size - 1);
         E minElement = heap[--size];
-        heapify(0);
+        heapifyDown(0);
 
         return minElement;
+    }
+
+    private void heapifyDown(int parentIndex) {
+        int leftChildIndex = parentIndex * 2 + 1;
+        int rightChildIndex = parentIndex * 2 + 2;
+        int lestElementIndex = parentIndex;
+
+        if (leftChildIndex < size
+                && greater(heap[lestElementIndex], heap[leftChildIndex])) {
+            lestElementIndex = leftChildIndex;
+        }
+
+        if (rightChildIndex < size
+                && greater(heap[lestElementIndex], heap[rightChildIndex])) {
+            lestElementIndex = rightChildIndex;
+        }
+
+        if (lestElementIndex != parentIndex) {
+            swap(parentIndex, lestElementIndex);
+            heapifyDown(lestElementIndex);
+        }
     }
 
 }
