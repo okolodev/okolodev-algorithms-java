@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class MaxBinaryHeapTest {
-    private BinaryHeap<Character> heap = new MaxBinaryHeap<>(3);
+    private BinaryHeap<Character> heap = new MaxBinaryHeap<>(4);
 
     @Test
     public void itShouldBeEmptyWhenCreatedWithoutInitialData() {
@@ -73,6 +73,21 @@ public class MaxBinaryHeapTest {
         assertThat(heap.extract(), is('B'));
 
         assertThat(heap.extract(), is('A'));
+    }
+
+    @Test
+    public void itShouldSupportMaxElementValue() {
+        heap.insert('A');
+        assertThat("max element mismatch", heap.peek(), is('A'));
+
+        heap.insert('C');
+        assertThat("max element mismatch", heap.peek(), is('C'));
+
+        heap.insert('D');
+        assertThat("max element mismatch", heap.peek(), is('D'));
+
+        heap.insert('B');
+        assertThat("max element mismatch", heap.peek(), is('D'));
     }
 
 }
