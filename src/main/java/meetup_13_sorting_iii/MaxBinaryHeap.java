@@ -17,15 +17,15 @@ public class MaxBinaryHeap<E extends Comparable<E>> implements BinaryHeap<E> {
 
     private void heapify() {
         for (int i = size / 2; i >= 0; i--) {
-            heapify(i);
+            heapifyDown(i);
         }
 
     }
 
-    private void heapify(int rootIndex) {
-        int leftChildIndex = rootIndex * 2 + 1;
-        int rightChildIndex = rootIndex * 2 + 2;
-        int largestElementIndex = rootIndex;
+    private void heapifyDown(int parentIndex) {
+        int leftChildIndex = parentIndex * 2 + 1;
+        int rightChildIndex = parentIndex * 2 + 2;
+        int largestElementIndex = parentIndex;
 
         if (leftChildIndex < size
                 && less(heap[largestElementIndex], heap[leftChildIndex])) {
@@ -37,9 +37,9 @@ public class MaxBinaryHeap<E extends Comparable<E>> implements BinaryHeap<E> {
             largestElementIndex = rightChildIndex;
         }
 
-        if (largestElementIndex != rootIndex) {
-            swap(rootIndex, largestElementIndex);
-            heapify(largestElementIndex);
+        if (largestElementIndex != parentIndex) {
+            swap(parentIndex, largestElementIndex);
+            heapifyDown(largestElementIndex);
         }
     }
 
@@ -56,7 +56,19 @@ public class MaxBinaryHeap<E extends Comparable<E>> implements BinaryHeap<E> {
     @Override
     public void insert(E element) {
         heap[size++] = element;
-        heapify((size - 1) / 2);
+        heapifyUp(size - 1);
+    }
+
+    private void heapifyUp(int childIndex) {
+        if (childIndex == 0) {
+            return;
+        }
+
+        int parentIndex = (childIndex - 1) / 2;
+        if (less(heap[parentIndex], heap[childIndex])) {
+            swap(parentIndex, childIndex);
+            heapifyUp(parentIndex);
+        }
     }
 
     @Override
@@ -70,7 +82,7 @@ public class MaxBinaryHeap<E extends Comparable<E>> implements BinaryHeap<E> {
         E element = heap[size];
         heap[size] = null;
 
-        heapify(0);
+        heapifyDown(0);
 
         return element;
     }
