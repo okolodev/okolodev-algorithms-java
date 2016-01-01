@@ -146,4 +146,8 @@ public class HashDictionary<K, V> implements Dictionary<K, V> {
         return size == 0;
     }
 
+    public int capacity() {
+        return buckets.length;
+    }
+
 }
