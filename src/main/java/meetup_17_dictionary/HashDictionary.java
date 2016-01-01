@@ -23,7 +23,7 @@ public class HashDictionary<K, V> implements Dictionary<K, V> {
 
     public HashDictionary(double loadFactor) {
         this.loadFactor = loadFactor;
-        buckets = (Entry<K, V>[]) new Entry[1];
+        buckets = (Entry<K, V>[]) new Entry[0];
     }
 
     @Override
@@ -35,21 +35,17 @@ public class HashDictionary<K, V> implements Dictionary<K, V> {
             return;
         }
 
-        ensureLoading();
+        increaseCapacityOnDemand();
         int hashIndex = hashIndex(key);
         buckets[hashIndex] = new Entry<>(key, value, buckets[hashIndex]);
         size++;
     }
 
-    private void ensureLoading() {
-        int capacity = buckets.length;
-        double load = capacity * loadFactor;
+    private void increaseCapacityOnDemand() {
+        double load = capacity() * loadFactor;
 
-        if (size >= load) {
-            int newCapacity = nextPrime(capacity * 2);
-            buckets = rehash(newCapacity);
-        } else if (load / 2 >= size) {
-            int newCapacity = nextPrime(capacity / 2);
+        if ((size + 1) >= load) {
+            int newCapacity = nextPrime(capacity() * 2);
             buckets = rehash(newCapacity);
         }
     }
@@ -98,6 +94,10 @@ public class HashDictionary<K, V> implements Dictionary<K, V> {
     }
 
     private Entry<K, V> findEntry(K key) {
+        if (isEmpty()) {
+            return null;
+        }
+
         int hashIndex = hashIndex(key);
         Entry<K, V> entry = buckets[hashIndex];
 
@@ -113,6 +113,10 @@ public class HashDictionary<K, V> implements Dictionary<K, V> {
 
     @Override
     public void remove(K key) {
+        if (isEmpty()) {
+            return;
+        }
+
         int hashIndex = hashIndex(key);
         Entry<K, V> entry = buckets[hashIndex];
         Entry<K, V> previousEntry = null;
@@ -126,14 +130,22 @@ public class HashDictionary<K, V> implements Dictionary<K, V> {
                 }
 
                 size--;
+                decreaseCapacityOnDemand();
                 return;
             }
 
             previousEntry = entry;
             entry = entry.next;
         }
+    }
 
-        ensureLoading();
+    private void decreaseCapacityOnDemand() {
+        double load = capacity() * loadFactor;
+
+        if (load / 2 >= size) {
+            int newCapacity = nextPrime(capacity() / 2);
+            buckets = rehash(newCapacity);
+        }
     }
 
     @Override
