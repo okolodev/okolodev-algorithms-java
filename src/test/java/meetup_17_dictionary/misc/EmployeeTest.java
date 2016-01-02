@@ -57,7 +57,7 @@ public class EmployeeTest {
         assertThat(employee, is(not(equalTo(null))));
     }
 
-    private Object[][] data() {
+    protected Object[][] data() {
         return new Object[][]{
                 {"John Doe", 1},
                 {"Thomas Smith", 2},
