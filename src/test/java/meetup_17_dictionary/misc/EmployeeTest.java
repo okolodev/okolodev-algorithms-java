@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 public class EmployeeTest {
 
     @Test
-    @Parameters(method = "data")
+    @Parameters(method = "namesAndIds")
     public void itShouldHaveName(String name, int id) {
         Employee employee = new Employee(name, id);
 
@@ -22,7 +22,7 @@ public class EmployeeTest {
     }
 
     @Test
-    @Parameters(method = "data")
+    @Parameters(method = "namesAndIds")
     public void itShouldHaveId(String name, int id) {
         Employee employee = new Employee(name, id);
 
@@ -30,7 +30,7 @@ public class EmployeeTest {
     }
 
     @Test
-    @Parameters(method = "data")
+    @Parameters(method = "namesAndIds")
     public void twoEmployeesShouldBeEqualIfTheyHaveSameNameAndId(String name,
                                                                  int id) {
         Employee firstEmployee = new Employee(name, id);
@@ -40,7 +40,7 @@ public class EmployeeTest {
     }
 
     @Test
-    @Parameters(method = "data")
+    @Parameters(method = "namesAndIds")
     public void twoEqualEmployeesShouldHaveEqualHashCode(String name,
                                                          int id) {
         Employee firstEmployee = new Employee(name, id);
@@ -50,14 +50,14 @@ public class EmployeeTest {
     }
 
     @Test
-    @Parameters(method = "data")
+    @Parameters(method = "namesAndIds")
     public void itShouldNotBeEqualToNull(String name, int id) {
         Employee employee = new Employee(name, id);
 
         assertThat(employee, is(not(equalTo(null))));
     }
 
-    protected Object[][] data() {
+    protected Object[][] namesAndIds() {
         return new Object[][]{
                 {"John Doe", 1},
                 {"Thomas Smith", 2},

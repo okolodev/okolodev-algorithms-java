@@ -2,6 +2,7 @@ package meetup_17_dictionary;
 
 import junitparams.JUnitParamsRunner;
 import meetup_17_dictionary.misc.Employee;
+import meetup_17_dictionary.misc.IdenticalHashCodeEmployee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -14,6 +15,11 @@ public abstract class DictionaryAbstractTest {
     public final Employee johnDoe = new Employee("John Doe", 1);
     public final Employee thomasSmith = new Employee("Thomas Smith", 2);
     public final Employee aliceCooper = new Employee("Alice Cooper", 2);
+
+    public final Employee emilyIdenticalHashCode =
+            new IdenticalHashCodeEmployee("Emily Fischer", 0);
+    public final Employee sabineIdenticalHashCode =
+            new IdenticalHashCodeEmployee("Sabine Koch", 1);
 
     private Dictionary<Employee, Integer> employeeToSalary = createDictionary();
 
@@ -132,6 +138,29 @@ public abstract class DictionaryAbstractTest {
         employeeToSalary.insert(null, 10);
 
         assertThat(employeeToSalary.get(null), is(10));
+    }
+
+    @Test
+    public void itShouldIncreaseSizeForDifferentKeysWithIdenticalHashCode() {
+        employeeToSalary.insert(emilyIdenticalHashCode, 55_000);
+        assertThat("size mismatch", employeeToSalary.size(), is(1));
+
+        employeeToSalary.insert(sabineIdenticalHashCode, 49_000);
+        assertThat("size mismatch", employeeToSalary.size(), is(2));
+    }
+
+    @Test
+    public void itShouldRemoveOnlySpecifiedKeyDisregardingToOthersWithIdenticalHashCode() {
+        employeeToSalary.insert(emilyIdenticalHashCode, 55_000);
+        employeeToSalary.insert(sabineIdenticalHashCode, 49_000);
+
+        employeeToSalary.remove(emilyIdenticalHashCode);
+
+        assertThat("Emily's contains mismatch",
+                employeeToSalary.contains(emilyIdenticalHashCode), is(false));
+
+        assertThat("Sabine's contains mismatch",
+                employeeToSalary.contains(sabineIdenticalHashCode), is(true));
     }
 
 }
