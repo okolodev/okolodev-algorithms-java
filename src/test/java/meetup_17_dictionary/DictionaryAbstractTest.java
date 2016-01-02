@@ -116,6 +116,13 @@ public abstract class DictionaryAbstractTest {
     }
 
     @Test
+    public void itShouldNotDecreaseSizeWhenRemovesNonexistentElementByKey() {
+        employeeToSalary.remove(johnDoe);
+
+        assertThat(employeeToSalary.size(), is(0));
+    }
+
+    @Test
     public void itShouldDecreaseSizeWhenElementsRemoved() {
         employeeToSalary.insert(johnDoe, 55_000);
         employeeToSalary.insert(thomasSmith, 48_000);
