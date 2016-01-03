@@ -47,3 +47,5 @@ buildscript {
 pitest {
     targetClasses = ['meetup*']
 }
+
+defaultTasks 'clean', 'check', 'pitest'
