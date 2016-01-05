@@ -215,6 +215,28 @@ public abstract class BinarySearchTreeAbstractTest {
     }
 
     @Test
+    @Parameters(method = "insertRemoveValues")
+    public void itShouldBeEmptyWhenAllInsertedValuesAreDeleted(Character[] values) {
+        Arrays.stream(values).forEach(binarySearchTree::insert);
+
+        Arrays.stream(values).forEach(binarySearchTree::remove);
+
+        assertThat(binarySearchTree.isEmpty(), is(true));
+    }
+
+    private Object[][] insertRemoveValues() {
+        return new Object[][]{
+                {new Character[]{}},
+                {new Character[]{'A'}},
+                {new Character[]{'A', 'B'}},
+                {new Character[]{'B', 'A'}},
+                {new Character[]{'D', 'B', 'C'}},
+                {new Character[]{'H', 'F', 'A', 'E'}},
+                {new Character[]{'E', 'B', 'D', 'A', 'G', 'F', 'H'}}
+        };
+    }
+
+    @Test
     public void itShouldSupportMinValue() {
         binarySearchTree.insert('C');
         assertThat("min value mismatch", binarySearchTree.min(), is('C'));
