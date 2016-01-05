@@ -6,6 +6,15 @@
 
 ## Materials
 
+### 18 Unbalanced Binary Search Tree
+ - [Wikipedia Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)
+ - [Visualgo - Binary search tree](http://visualgo.net/bst.html)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@atermenji](https://github.com/atermenji)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 17 Dictionary (Hash Table)
  - [Wikipedia Hash table](https://en.wikipedia.org/wiki/Hash_table)
 
