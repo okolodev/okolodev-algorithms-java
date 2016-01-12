@@ -2,7 +2,6 @@ package meetup_19_n_sum;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-import junitparams.naming.TestCaseName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -15,12 +14,20 @@ public class TwoSumTest {
 
     @Test
     @Parameters(method = "singleSolution")
-    @TestCaseName("{params}")
     public void itShouldFindIndicesSummingToTargetForSingeSolution(int[] numbers,
                                                                    int target,
                                                                    int[] indices
     ) {
         assertThat(twoSum.twoSum(numbers, target), is(indices));
+    }
+
+    @Test
+    @Parameters(method = "singleSolution")
+    public void itShouldFindIndicesSummingToTargetForSingeSolution2(int[] numbers,
+                                                                   int target,
+                                                                   int[] indices
+    ) {
+        assertThat(twoSum.twoSum2(numbers, target), is(indices));
     }
 
 
@@ -43,6 +50,16 @@ public class TwoSumTest {
             int[] indices
     ) {
         assertThat(twoSum.twoSum(numbers, target), is(indices));
+    }
+
+    @Test
+    @Parameters(method = "multiSolutionFirstSolution")
+    public void itShouldFindIndicesSummingToTargetForMultiSolutionFirstSolution2(
+            int[] numbers,
+            int target,
+            int[] indices
+    ) {
+        assertThat(twoSum.twoSum2(numbers, target), is(indices));
     }
 
     private Object[][] multiSolutionFirstSolution() {

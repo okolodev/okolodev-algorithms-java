@@ -30,6 +30,8 @@ public class SummaryRangesTest {
                 {new int[]{5}, toList("5")},
                 {new int[]{1, 2, 3, 4, 5}, toList("1->5")},
                 {new int[]{0, 1, 2, 4, 5, 7}, toList("0->2", "4->5", "7")},
+                {new int[]{0, 1, 2, 4, 5, 7, 10},
+                        toList("0->2", "4->5", "7", "10")},
                 {new int[]{12, 13, 81, 82, 83, 84, 86, 87, 88},
                         toList("12->13", "81->84", "86->88")}
         };

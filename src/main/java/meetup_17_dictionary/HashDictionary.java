@@ -9,6 +9,10 @@ public class HashDictionary<K, V> implements Dictionary<K, V> {
     private int size;
     private Entry<K, V>[] buckets;
 
+    public HashDictionary() {
+        this(1);
+    }
+
     private static class Entry<K, V> {
         private K key;
         private V value;
