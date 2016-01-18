@@ -6,6 +6,19 @@
 
 ## Materials
 
+### 19 N Sum
+- [Leetcode 1. 2 Sum](https://leetcode.com/problems/two-sum/)
+- [Leetcode 15. 3 Sum](https://leetcode.com/problems/3sum/)
+- [Leetcode 228. Summary Ranges](https://leetcode.com/problems/summary-ranges/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@atermenji](https://github.com/atermenji),
+[@SunnyMagadan](https://github.com/SunnyMagadan),
+[@kirpichenko](https://github.com/kirpichenko),
+[@DZozulya](https://github.com/DZozulya)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 18 Unbalanced Binary Search Tree
  - [Wikipedia Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)
  - [Visualgo - Binary search tree](http://visualgo.net/bst.html)
