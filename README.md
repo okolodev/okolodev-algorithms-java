@@ -6,6 +6,17 @@
 
 ## Materials
 
+### 20 Rotate Array and 3 Sum
+- [Leetcode 189. Rotate Array](https://leetcode.com/problems/rotate-array/)
+- [Leetcode 15. 3 Sum](https://leetcode.com/problems/3sum/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan),
+[@kirpichenko](https://github.com/kirpichenko),
+[@DZozulya](https://github.com/DZozulya)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 19 N Sum
 - [Leetcode 1. 2 Sum](https://leetcode.com/problems/two-sum/)
 - [Leetcode 15. 3 Sum](https://leetcode.com/problems/3sum/)
