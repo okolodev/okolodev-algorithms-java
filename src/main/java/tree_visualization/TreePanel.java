@@ -12,14 +12,18 @@ public class TreePanel extends JPanel {
     private final int canvasHeight;
     private TreeNode<Integer> root;
 
-    public TreePanel(TreeNode<Integer> root) {
-        this.root = root;
+    public TreePanel() {
         this.treeHeight = 5;
         canvasWidth = cellSize * widthMultiplier(treeHeight);
         canvasHeight = cellSize * treeHeight * 2;
 
         setBorder(BorderFactory.createLineBorder(Color.black));
         setPreferredSize(new Dimension(canvasWidth, canvasHeight));
+    }
+
+    public TreePanel(TreeNode<Integer> root) {
+        this();
+        this.root = root;
     }
 
     public void setTree(TreeNode<Integer> root) {
