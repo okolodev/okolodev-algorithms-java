@@ -24,6 +24,7 @@ public class AvlBinarySearchTree<E extends Comparable<E>>
 
     private static class AvlTreeNode<E extends Comparable<E>> {
         private final E value;
+        private int height;
         private AvlTreeNode<E> left;
         private AvlTreeNode<E> right;
 
@@ -59,6 +60,30 @@ public class AvlBinarySearchTree<E extends Comparable<E>>
             return value.compareTo(otherValue) > 0;
         }
 
+        public int getLeftHeight() {
+            return height(left);
+        }
+
+        public int getRightHeight() {
+            return height(right);
+        }
+
+        private int height(AvlTreeNode<E> node) {
+            if (node == null) {
+                return -1;
+            }
+
+            return node.height;
+        }
+
+        public void updateHeight() {
+            height = Math.max(getLeftHeight(), getRightHeight()) + 1;
+        }
+
+        public int balanceFactor() {
+            return getLeftHeight() - getRightHeight();
+        }
+
     }
 
     @Override
@@ -86,7 +111,55 @@ public class AvlBinarySearchTree<E extends Comparable<E>>
             parent.setLeft(insert(value, parent.getLeft()));
         }
 
-        return parent;
+        return balance(parent);
+    }
+
+    private AvlTreeNode<E> balance(AvlTreeNode<E> node) {
+        int balanceFactor = node.balanceFactor();
+
+        if (balanceFactor == 2) {
+            AvlTreeNode<E> left = node.getLeft();
+
+            if (left.getLeftHeight() < left.getRightHeight()) {
+                node.setLeft(rotateRight(left));
+            }
+
+            node = rotateLeft(node);
+        } else if (balanceFactor == -2) {
+            AvlTreeNode<E> right = node.getRight();
+
+            if (right.getRightHeight() < right.getLeftHeight()) {
+                node.setRight(rotateLeft(right));
+            }
+
+            node = rotateRight(node);
+        } else {
+            node.updateHeight();
+        }
+
+        return node;
+    }
+
+    private AvlTreeNode<E> rotateLeft(AvlTreeNode<E> node) {
+        AvlTreeNode<E> left = node.getLeft();
+        node.setLeft(left.getRight());
+        left.setRight(node);
+
+        node.updateHeight();
+        left.updateHeight();
+
+        return left;
+    }
+
+    private AvlTreeNode<E> rotateRight(AvlTreeNode<E> node) {
+        AvlTreeNode<E> right = node.getRight();
+        node.setRight(right.getLeft());
+        right.setLeft(node);
+
+        node.updateHeight();
+        right.updateHeight();
+
+        return right;
     }
 
     @Override
@@ -136,11 +209,11 @@ public class AvlBinarySearchTree<E extends Comparable<E>>
                 minSuccessor.setRight(removeMin(parent.getRight()));
                 minSuccessor.setLeft(parent.getLeft());
 
-                return minSuccessor;
+                return balance(minSuccessor);
             }
         }
 
-        return parent;
+        return balance(parent);
     }
 
     private AvlTreeNode<E> removeMin(AvlTreeNode<E> parent) {
@@ -149,7 +222,7 @@ public class AvlBinarySearchTree<E extends Comparable<E>>
         }
 
         parent.setLeft(removeMin(parent.getLeft()));
-        return parent;
+        return balance(parent);
     }
 
     @Override
