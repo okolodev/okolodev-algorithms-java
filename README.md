@@ -6,6 +6,19 @@
 
 ## Materials
 
+### 21 AVL Binary Search Tree
+- [Wikipedia AVL tree](https://en.wikipedia.org/wiki/AVL_tree)
+- [Visualgo - Binary search tree (Click the AVL TREE tab on the top)](http://visualgo.net/bst.html)
+- [![6. AVL Trees, AVL Sort](http://img.youtube.com/vi/FNeL18KsWPc/0.jpg)](http://www.youtube.com/watch?v=FNeL18KsWPc)
+- [![R6. AVL Trees](http://img.youtube.com/vi/IWzYoXKaRIc/0.jpg)](http://www.youtube.com/watch?v=IWzYoXKaRIc)
+- [MIT 6.006 Introduction to Algorithms, Fall 2011 Download Course Materials](http://ocw.mit.edu/ans15436/ZipForEndUsers/6/6-006-fall-2011/6-006-fall-2011.zip)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan),
+[@kirpichenko](https://github.com/kirpichenko)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 20 Rotate Array and 3 Sum
 - [Leetcode 189. Rotate Array](https://leetcode.com/problems/rotate-array/)
 - [Leetcode 15. 3 Sum](https://leetcode.com/problems/3sum/)
