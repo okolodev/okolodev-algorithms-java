@@ -6,6 +6,21 @@
 
 ## Materials
 
+### 22 Directed Graph Representations
+- [Wikipedia Graph (discrete mathematics)](https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29)
+- [Wikipedia Graph (abstract data type)](https://en.wikipedia.org/wiki/Graph_%28abstract_data_type%29)
+- [Wikipedia Directed Graph (discrete mathematics)](https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29#Directed_graph)
+- [Wikipedia Directed Graph](https://en.wikipedia.org/wiki/Directed_graph)
+- [Wikipedia Undirected Graph (discrete mathematics)](https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29#Undirected_graph)
+- [Wikipedia Adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix)
+- [Wikipedia Adjacency list](https://en.wikipedia.org/wiki/Adjacency_list)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan),
+[@kirpichenko](https://github.com/kirpichenko)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 21 AVL Binary Search Tree
 - [Wikipedia AVL tree](https://en.wikipedia.org/wiki/AVL_tree)
 - [Visualgo - Binary search tree (Click the AVL TREE tab on the top)](http://visualgo.net/bst.html)
