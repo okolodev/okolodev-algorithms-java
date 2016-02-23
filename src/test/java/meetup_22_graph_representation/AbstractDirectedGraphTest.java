@@ -244,4 +244,20 @@ public abstract class AbstractDirectedGraphTest {
         assertThat(digraph.adjacentVerticesTo(0), containsInAnyOrder(1, 3, 4));
     }
 
+    @Test
+    public void itShouldNotDecreseEdgesNumberWhenRemovesEdgeToInself() {
+        digraph.removeEdge(1, 1);
+
+        assertThat(digraph.edges(), is(0));
+    }
+
+    @Test
+    public void itShouldPreserveNotRemovedEdgesToAdjacentVertices() {
+        digraph.addEdge(0, 1);
+        digraph.addEdge(0, 2);
+
+        digraph.removeEdge(0, 1);
+        assertThat(digraph.adjacentVerticesTo(0), containsInAnyOrder(2));
+    }
+
 }
