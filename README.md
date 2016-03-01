@@ -6,6 +6,16 @@
 
 ## Materials
 
+### 23 The Celebrity Problem and Undirected Graph representation
+- [Geeks for Geeks - The Celebrity Problem](http://www.geeksforgeeks.org/the-celebrity-problem/)
+- [Algorithms, 4th Edition - 4.1 Undirected Graphs](http://algs4.cs.princeton.edu/41graph/)
+- [Wikipedia Undirected Graph (discrete mathematics)](https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29#Undirected_graph)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@kirpichenko](https://github.com/kirpichenko)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 22 Directed Graph Representations
 - [Wikipedia Graph (discrete mathematics)](https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29)
 - [Wikipedia Graph (abstract data type)](https://en.wikipedia.org/wiki/Graph_%28abstract_data_type%29)
