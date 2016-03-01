@@ -19,7 +19,29 @@ public class CelebrityProblem {
     }
 
     public Optional<Integer> findCelebrity() {
-        throw new UnsupportedOperationException("Implement me!");
+        if (peopleNumber < 2) {
+            return Optional.empty();
+        }
+
+        int candidate = 0;
+
+        for (int next = 1; next < peopleNumber; next++) {
+            if (knows(candidate, next)) {
+                candidate = next;
+            }
+        }
+
+        for (int i = 0; i < peopleNumber; i++) {
+            if (i == candidate) {
+                continue;
+            }
+
+            if (knows(candidate, i) || !knows(i, candidate)) {
+                return Optional.empty();
+            }
+        }
+
+        return Optional.of(candidate);
     }
 
     private boolean knows(int v, int u) {

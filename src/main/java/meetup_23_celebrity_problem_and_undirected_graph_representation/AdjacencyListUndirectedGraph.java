@@ -1,46 +1,52 @@
 package meetup_23_celebrity_problem_and_undirected_graph_representation;
 
+import meetup_22_graph_representation.AdjacencyListDirectedGraph;
+import meetup_22_graph_representation.DirectedGraph;
+
 import java.util.Collection;
 
 public class AdjacencyListUndirectedGraph implements UndirectedGraph {
+    private final DirectedGraph digraph;
 
     public AdjacencyListUndirectedGraph(int vertices) {
-        throw new UnsupportedOperationException("Implement me!");
+        digraph = new AdjacencyListDirectedGraph(vertices);
     }
 
     @Override
     public void addEdge(int v, int u) {
-        throw new UnsupportedOperationException("Implement me!");
+        digraph.addEdge(v, u);
+        digraph.addEdge(u, v);
     }
 
     @Override
     public void removeEdge(int v, int u) {
-        throw new UnsupportedOperationException("Implement me!");
+        digraph.removeEdge(v, u);
+        digraph.removeEdge(u, v);
     }
 
     @Override
     public boolean adjacent(int v, int u) {
-        throw new UnsupportedOperationException("Implement me!");
+        return digraph.adjacent(v, u);
     }
 
     @Override
     public int degreeOf(int v) {
-        throw new UnsupportedOperationException("Implement me!");
+        return digraph.degreeOf(v);
     }
 
     @Override
     public Collection<Integer> adjacentVerticesTo(int v) {
-        throw new UnsupportedOperationException("Implement me!");
+        return digraph.adjacentVerticesTo(v);
     }
 
     @Override
     public int vertices() {
-        throw new UnsupportedOperationException("Implement me!");
+        return digraph.vertices();
     }
 
     @Override
     public int edges() {
-        throw new UnsupportedOperationException("Implement me!");
+        return digraph.edges() / 2;
     }
 
 }
