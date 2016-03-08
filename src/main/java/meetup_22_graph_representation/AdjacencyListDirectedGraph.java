@@ -4,9 +4,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.HashSet;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @see <a href="https://en.wikipedia.org/wiki/Adjacency_list">Adjacency list</a>
@@ -28,7 +28,7 @@ public class AdjacencyListDirectedGraph implements DirectedGraph {
             return;
         }
         if (!adjacencyList.containsKey(v)) {
-            adjacencyList.put(v, new HashSet<>());
+            adjacencyList.put(v, new TreeSet<>());
         }
 
         Set<Integer> vSet = adjacencyList.get(v);
