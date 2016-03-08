@@ -6,6 +6,15 @@
 
 ## Materials
 
+### 24 Depth-First Search and Breadth-First Search
+- [CS 2112 Spring 2012 - Lecture 24: Graph traversals](http://www.cs.cornell.edu/courses/cs2112/2012sp/lectures/lec24/lec24-12sp.html)
+- [Wikipedia - Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
+- [Wikipedia - Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 23 The Celebrity Problem and Undirected Graph representation
 - [Geeks for Geeks - The Celebrity Problem](http://www.geeksforgeeks.org/the-celebrity-problem/)
 - [Algorithms, 4th Edition - 4.1 Undirected Graphs](http://algs4.cs.princeton.edu/41graph/)
