@@ -8,20 +8,20 @@ public class UndirectedGraphCycleDetector {
 
     public boolean hasCycle(UndirectedGraph graph) {
         boolean[] visited = new boolean[graph.vertices()];
-        Stack<Integer> stack = new LinkedStack<>();
-        Stack<Integer> parentStack = new LinkedStack<>();
 
         for (int startVertex = 0; startVertex < graph.vertices(); startVertex++) {
             if (visited[startVertex]) {
                 continue;
             }
 
+            Stack<Integer> stack = new LinkedStack<>();
+            Stack<Integer> parentStack = new LinkedStack<>();
             stack.push(startVertex);
             parentStack.push(startVertex);
 
             while (!stack.isEmpty()) {
                 int v = stack.pop();
-                int parentV = parentStack.pop();
+                int parent = parentStack.pop();
 
                 if (visited[v]) {
                     continue;
@@ -30,7 +30,7 @@ public class UndirectedGraphCycleDetector {
                 visited[v] = true;
 
                 for (int u : graph.adjacentVerticesTo(v)) {
-                    if (visited[u] && parentV != u) {
+                    if (visited[u] && u != parent) {
                         return true;
                     }
 
