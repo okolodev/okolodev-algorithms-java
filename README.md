@@ -6,6 +6,19 @@
 
 ## Materials
 
+### 25 Graph Cycle Detection
+- ![Undirected Acyclic Graph](src/main/resources/meetup_25_graph_cycle_detection/undirected-acyclic-graphs.png)
+- ![Undirected Cyclic Graph](src/main/resources/meetup_25_graph_cycle_detection/undirected-cyclic-graphs.png)
+- ![Directed Acyclic Graph](src/main/resources/meetup_25_graph_cycle_detection/directed-acyclic-graphs.png)
+- ![Directed Cyclic Graph](src/main/resources/meetup_25_graph_cycle_detection/directed-cyclic-graphs.png)
+- [G22 1170-001 - Slide 7](http://www.cs.nyu.edu/courses/summer04/G22.1170-001/6a-Graphs-More.pdf)<br />
+  ![DFS for directed graph cycle detection](src/main/resources/meetup_25_graph_cycle_detection/dfs-for-directed-graph-cycle-detection.png)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 24 Depth-First Search and Breadth-First Search
 - [CS 2112 Spring 2012 - Lecture 24: Graph traversals](http://www.cs.cornell.edu/courses/cs2112/2012sp/lectures/lec24/lec24-12sp.html)
 - [Wikipedia - Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)

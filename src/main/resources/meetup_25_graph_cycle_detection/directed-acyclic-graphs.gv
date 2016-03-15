@@ -1,0 +1,77 @@
+digraph {
+  label="Directed Acyclic Graphs";
+
+  subgraph clusterSingleDigraph {
+    label="single digraph";
+    n100 [label="0"];
+  }
+
+  subgraph clusterTwoDigraphA {
+    label="two digraph A";
+    n200 [label="0"];
+    n201 [label="1"];
+
+    n200 -> n201;
+  }
+
+  subgraph clusterTwoDigraphB {
+    label="two digraph B";
+    n300 [label="0"];
+    n301 [label="1"];
+
+    n301 -> n300;
+  }
+
+  subgraph clusterThreeDigraphA {
+    label="three digraph A";
+    n500 [label="0"];
+    n501 [label="1"];
+    n502 [label="2"];
+
+    n500 -> n501 -> n502;
+    n500 -> n502;
+  }
+
+  subgraph clusterThreeDigraphB {
+    label="three digraph B";
+    n600 [label="0"];
+    n601 [label="1"];
+    n602 [label="2"];
+
+    n600 -> n602 -> n601;
+    n600 -> n601;
+  }
+
+  subgraph clusterThreeDigraphC {
+    label="three digraph C";
+    n700 [label="0"];
+    n701 [label="1"];
+    n702 [label="2"];
+
+    n701 -> n702 -> n700;
+    n701 -> n700;
+  }
+
+  subgraph clusterFourDigraph {
+    label="four digraph";
+    n803 [label="3"];
+    n802 [label="2"];
+    n801 [label="1"];
+    n800 [label="0"];
+  }
+
+  subgraph clusterFiveDigraph {
+    label="five digraph";
+    n900 [label="0"];
+    n901 [label="1"];
+    n902 [label="2"];
+    n903 [label="3"];
+    n904 [label="4"];
+
+    n900 -> n901 -> n902 -> n903 -> n904;
+    n900 -> n902;
+    n900 -> n903;
+    n901 -> n904;
+  }
+
+}
