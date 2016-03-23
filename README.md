@@ -6,6 +6,19 @@
 
 ## Materials
 
+### 26 Graph Spanning Tree Edges Types
+- [Wikipedia - Spanning Tree](https://en.wikipedia.org/wiki/Spanning_tree)
+- ![Spanning Tree](https://upload.wikimedia.org/wikipedia/commons/d/d4/4x4_grid_spanning_tree.svg)
+- ![Wikipedia - The four types of edges defined by a spanning tree](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Tree_edges.svg/412px-Tree_edges.svg.png)
+- ![The four types of edges defined by a spanning tree with time stamps](src/main/resources/meetup_26_graph_spanning_tree_edge_types/Tree_edges-with-time-stamps.svg.png)
+- [![14. Depth-First Search (DFS), Topological Sort](http://img.youtube.com/vi/AfSk24UTFS8/0.jpg)](http://www.youtube.com/watch?v=AfSk24UTFS8)
+- [![R14. Depth-First Search (DFS)](http://img.youtube.com/vi/C5SPsY72_CM/0.jpg)](http://www.youtube.com/watch?v=C5SPsY72_CM)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 25 Graph Cycle Detection
 - ![Undirected Acyclic Graph](src/main/resources/meetup_25_graph_cycle_detection/undirected-acyclic-graphs.png)
 - ![Undirected Cyclic Graph](src/main/resources/meetup_25_graph_cycle_detection/undirected-cyclic-graphs.png)
