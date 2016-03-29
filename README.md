@@ -6,6 +6,20 @@
 
 ## Materials
 
+### 27 Connected Components and Strongly Connected Components
+- [Wikipedia - Connected component (graph_theory)](https://en.wikipedia.org/wiki/Connected_component_%28graph_theory%29)
+- ![Example Undirected Graph](src/main/resources/meetup_27_connected_components_and_strong_components/undirected-graph-thirteen.png)
+- ![Example Undirected Graph Connected Components](src/main/resources/meetup_27_connected_components_and_strong_components/undirected-graph-thirteen-connected-components.png)
+- [Wikipedia - Strongly connected component](https://en.wikipedia.org/wiki/Strongly_connected_component)
+- ![Example Directed Graph](src/main/resources/meetup_27_connected_components_and_strong_components/digraph-thirteen.png)
+- ![Example Directed Graph Strongly Connected Components Colored](src/main/resources/meetup_27_connected_components_and_strong_components/digraph-thirteen-strongly-connected-components-colored.png)
+- ![Example Directed Graph Strongly Connected Components](src/main/resources/meetup_27_connected_components_and_strong_components/digraph-thirteen-strongly-connected-components.png)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 26 Graph Spanning Tree Edges Types
 - [Wikipedia - Spanning Tree](https://en.wikipedia.org/wiki/Spanning_tree)
 - ![Spanning Tree](https://upload.wikimedia.org/wikipedia/commons/d/d4/4x4_grid_spanning_tree.svg)
