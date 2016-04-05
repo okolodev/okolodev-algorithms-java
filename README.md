@@ -6,6 +6,17 @@
 
 ## Materials
 
+### 28 Topological Sorting
+- [Wikipedia - Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting)
+- [**Video** Topological Sort (Algorithms, Part II by Kevin Wayne, Robert Sedgewick)](https://class.coursera.org/algs4partII-007/lecture/10)
+- [![14. Depth-First Search (DFS), Topological Sort](http://img.youtube.com/vi/AfSk24UTFS8/0.jpg)](http://www.youtube.com/watch?v=AfSk24UTFS8&t=41m56s)
+- [![R14. Depth-First Search (DFS)](http://img.youtube.com/vi/C5SPsY72_CM/0.jpg)](http://www.youtube.com/watch?v=C5SPsY72_CM&t=38m49s)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 27 Connected Components and Strongly Connected Components
 - [Wikipedia - Connected component (graph_theory)](https://en.wikipedia.org/wiki/Connected_component_%28graph_theory%29)
 - ![Example Undirected Graph](src/main/resources/meetup_27_connected_components_and_strong_components/undirected-graph-thirteen.png)
