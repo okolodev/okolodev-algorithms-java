@@ -1,0 +1,23 @@
+digraph pf_tree_after {
+    label="Setting a new value of the node 2"
+
+    "first version" [shape=plaintext]
+    "first version" -> "0"
+    "0" -> "1" [tailport=sw]
+    "0" -> "2" [tailport=se]
+    "1" -> "3" [tailport=sw]
+    "1" -> "4" [tailport=se]
+    "2" -> "5" [tailport=sw]
+    "2" -> "6" [tailport=se]
+
+    node [color=blue, fontcolor=blue]
+    edge [color=blue]
+    "second version" [shape=plaintext]
+    "second version" -> "0'"
+    "0'" -> "1" [tailport=sw]
+    "0'" -> "2*" [tailport=se]
+    "2*" -> "5" [tailport=sw]
+    "2*" -> "6" [tailport=se]
+
+    "2*" [color=green, fontcolor=green]
+}
