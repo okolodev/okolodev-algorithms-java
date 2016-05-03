@@ -6,6 +6,17 @@
 
 ## Materials
 
+### 29 Fully Persistent Array
+- [Wikipedia - Persistent Data Structures](https://en.wikipedia.org/wiki/Persistent_data_structure)
+- [Wikipedia - Persistent Data Structures - Path copying](https://en.wikipedia.org/wiki/Persistent_data_structure#Path_copying)
+- ![Path copying - 5](src/main/resources/meetup_29_fully_persistent_array/path-copying-fully-persistent-array-5.png)
+- ![Path copying - 2](src/main/resources/meetup_29_fully_persistent_array/path-copying-fully-persistent-array-2.png)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 28 Topological Sorting
 - [Wikipedia - Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting)
 - [**Video** Topological Sort (Algorithms, Part II by Kevin Wayne, Robert Sedgewick)](https://class.coursera.org/algs4partII-007/lecture/10)
