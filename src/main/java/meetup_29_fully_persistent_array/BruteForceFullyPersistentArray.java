@@ -1,29 +1,37 @@
 package meetup_29_fully_persistent_array;
 
-public class BruteForceFullyPersistentArray<E> implements FullyPersistentArray<E> {
+import java.util.ArrayList;
+import java.util.List;
 
-    public BruteForceFullyPersistentArray(String[] elements) {
-        throw new UnsupportedOperationException("Implement me!");
+public class BruteForceFullyPersistentArray<E> implements FullyPersistentArray<E> {
+    private final List<E[]> versions = new ArrayList<>();
+
+    public BruteForceFullyPersistentArray(E... elements) {
+        versions.add(elements.clone());
     }
 
     @Override
     public int update(int version, int index, E newValue) {
-        throw new UnsupportedOperationException("Implement me!");
+        E[] clone = versions.get(version).clone();
+        clone[index] = newValue;
+        versions.add(clone);
+
+        return currentVersion();
     }
 
     @Override
     public E get(int version, int index) {
-        throw new UnsupportedOperationException("Implement me!");
+        return versions.get(version)[index];
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Implement me!");
+        return versions.get(0).length;
     }
 
     @Override
     public int currentVersion() {
-        throw new UnsupportedOperationException("Implement me!");
+        return versions.size() - 1;
     }
 
 }
