@@ -6,6 +6,16 @@
 
 ## Materials
 
+### 30 Roman to Decimal and back Conversion
+- [Roman numerals](https://en.wikipedia.org/wiki/Roman_numerals)
+- [On Roman Numerals](http://www.novaroma.org/via_romana/numbers.html)
+- [Roman Numbers from I to M](http://artlung.com/smorgasborg/roman-numerals/?page=1)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 29 Fully Persistent Array
 - [Wikipedia - Persistent Data Structures](https://en.wikipedia.org/wiki/Persistent_data_structure)
 - [Wikipedia - Persistent Data Structures - Path copying](https://en.wikipedia.org/wiki/Persistent_data_structure#Path_copying)
