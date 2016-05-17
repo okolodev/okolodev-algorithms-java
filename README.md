@@ -6,6 +6,26 @@
 
 ## Materials
 
+### 31 Bloom Fiter
+- [Wikipedia - Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter)
+- [Wikipedia - False positives and false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives)
+- [Wikipedia - Type I and type II errors](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors)
+- [Wikipedia - Universal hashing](https://en.wikipedia.org/wiki/Universal_hashing)
+- [Wikipedia - Double hashing](https://en.wikipedia.org/wiki/Double_hashing)
+- [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
+- [Wikipedia - SHA-1](https://en.wikipedia.org/wiki/SHA-1)
+- [Bloom Filters by Example](http://billmill.org/bloomfilter-tutorial/)
+- [Bloom Filters](https://www.jasondavies.com/bloomfilter/)
+- [MurmurHash](https://sites.google.com/site/murmurhash/)
+- [Producing n hash functions by hashing only once](http://willwhim.wpengine.com/2011/09/03/producing-n-hash-functions-by-hashing-only-once/)
+- [Cuckoo Hashing Visualization](http://www.lkozma.net/cuckoo_hashing_visualization/)
+- [All you ever wanted to know about writing bloom filters ](http://spyced.blogspot.de/2009/01/all-you-ever-wanted-to-know-about.html)
+- [Bloom Filters - the math](http://pages.cs.wisc.edu/~cao/papers/summary-cache/node8.html)
+
+Participants:
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
 ### 30 Roman to Decimal and back Conversion
 - [Roman numerals](https://en.wikipedia.org/wiki/Roman_numerals)
 - [On Roman Numerals](http://www.novaroma.org/via_romana/numbers.html)
