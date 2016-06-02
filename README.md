@@ -6,6 +6,19 @@
 
 ## Materials
 
+### 32 Tic Tac Toe and findSum
+- [Glassdoor - How would you determine if someone has won a game of tic-tac-toe on a board of any size?](https://www.glassdoor.com/Interview/How-would-you-determine-if-someone-has-won-a-game-of-tic-tac-toe-on-a-board-of-any-size-QTN_1104.htm)
+- [Wikipedia - Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
+- [Wikipedia - Anti-diagonal matrix](https://en.wikipedia.org/wiki/Anti-diagonal_matrix)
+- [findSum from "F*** You, I Quit — Hiring Is Broken"](https://medium.com/@evnowandforever/f-you-i-quit-hiring-is-broken-bb8f3a48d324#.cn2of1pqr)<br />
+  write a function findSum(array1, array2, sum) that returns true if two numbers from two sorted arrays add up to a given sum.
+
+Participants:
+[@andreysobol](https://github.com/andreysobol),
+[@SunnyMagadan](https://github.com/SunnyMagadan)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
+
 ### 31 Bloom Fiter
 - [Wikipedia - Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter)
 - [Wikipedia - False positives and false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives)
