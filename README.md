@@ -6,6 +6,15 @@
 
 ## Materials
 
+### 33 Anagram Groups and Reverse Integer
+- [Leetcode 49. Group Anagrams](https://leetcode.com/problems/anagrams/)
+- [Leetcode 7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+
+Participants:
+[@andreysobol](https://github.com/andreysobol)<br />
+Host: [@ffbit](https://github.com/ffbit)
+
+
 ### 32 Tic Tac Toe and findSum
 - [Glassdoor - How would you determine if someone has won a game of tic-tac-toe on a board of any size?](https://www.glassdoor.com/Interview/How-would-you-determine-if-someone-has-won-a-game-of-tic-tac-toe-on-a-board-of-any-size-QTN_1104.htm)
 - [Wikipedia - Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
